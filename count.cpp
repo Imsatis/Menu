@@ -32,15 +32,15 @@ using namespace std;
 
        }
 
-    void esc()
+    void esc()               //esc testing fail
  { 
     string str="";
     char ch;
     bool loop=true;
     while(loop)
     {
-     ch=cin.get();
-     cout<<"hello";
+     cin>>ch;
+     cout<<"\nhello";
      str+=ch;
      if (ch==27)
      loop=false;
@@ -53,8 +53,8 @@ using namespace std;
     int main()
 
 {
-   esc();
-   //chk();
+   //esc();
+   chk();
    //check();
    getch();
    return 0;
