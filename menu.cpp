@@ -297,7 +297,7 @@ int main()
 {   
        //variable decliaration;
 
-    string 1item=0,2item=0,3item=0,4item,5item,6item,7item,8item,9item,10item,11item,12item,     13item,14item,15item;
+    string 1item,2item,3item,4item,5item,6item,7item,8item,9item,10item,11item,12item,     13item,14item,15item;
     
     cout<<1item;
     cout<<2item;
@@ -335,7 +335,14 @@ int main()
 
        non-veg_edit();
     {
-       
-       
+       int count=0,chk;
+      
+       if(count==0)
+       {
+         cin>>1item;
+	 count++;
+         }
+        
+
         }   
 
