@@ -1,144 +1,172 @@
 #include<iostream>
-
+#include<fstream.h>
 
          //testing for edit environment by user;
 
 
 using namespace std;
 
-    int main()
-  {
-	  string a,b,c,d,e,f,g,h,i,j,k,l;
-   
-      int count=0;
+  struct all_item {
 
-       if(a==0)
-         { cin>>a;
-	   count++;
-	   
-	  }
-	
+    string a="",b="",c="",d="",e="",f="",g="",h="",i="",j="",k="",l="";   
+  }
+
+class data {
+
+     public:
+     void read_file(int &count) {
+      
+      ifstream read;
+      read.open("data.txt");
+      read>>count;
+            
+         }
+
+     void save_file(int &count) {
+
+      ofstream save("data.txt");
+      save<<count; 
        
-       if(b==0)
-       { 
-       cint>>b;
-        }
-	else
-      {	
-       count++;
-        }
-	
-        if(c==0)
-       { 
-       cint>>c;
-        }
-	else
-      {	
-       count++;
-        }
+         } 
 
-        if(d==0)
-       { 
-       cint>>d;
-        }
-	else
-      {	
-       count++;
-        }
-	
-	if(e==0)
-       { 
-       cint>>e;
-        }
-	else
-      {	
-       count++;
-        }
 
-       if(f==0)
-       { 
-       cint>>f;
-        }
-	else
-      {	
-       count++;
-        }
+     void read_file(string &item_list) {
+      
+      ifstream read;
+      read.open("menu_data.txt");
+      read>>a>>b>>c>>d>>e>>f>>g>>h>>i>>j>>k>>l;  //all items 
+            
+         }
 
-        if(g==0)
-       { 
-       cint>>g;
-        }
-	else
-      {	
-       count++;
-        }
+     void save_file(string &item_list) {
+
+      ofstream save("menu_data.txt");
+      save<<a<<"\n"<<b<<"\n"<<c<<"\n"<<d<<"\n"<<e<<"\n"<<f<<"\n"<<g<<"\n"<<h<<"\n"<<i<<"\n"<<j<<"\n"<<k<<"\n"<<l<<"\n"; 
+       
+         }      
+
+   };
+
      
-        if(h==0)
-       { 
-       cint>>h;
-        }
-	else
-      {	
-       count++;
-        }
+     int main() {
+  
+	   string a="",b,c,d,e,f,g,h,i,j,k,l;
+     char ch;
+     data obj; 
+     
+       int count;
+       obj.read_file(count);
 
-       if(i=0)
-       { 
-       cint>>h;
-        }
-	else
-      {	
-       count++;
-        }
+       switch(count) {
 
-       if(j==0)
-       { 
-       cint>>i;
-        }
-	else
-      {	
-       count++;
-        }
+           case 0:
+             while(getch(ch)!=27) {
+                cout<<ch;
+                a+=ch;
+                  }
+              if    
+	         count++;
+	           
+             }
+	
        
-        if(k==0)
-       { 
-       cint>>j;
-        }
-	else
-      {	
-       count++;
-        }
+       if(count==1) { 
+       
+           cin>>b;
+           count++; 
+        
+             }
+	
+	
+       if(count==2) { 
+       
+           cin>>c;
+           count++;
+
+              }
+
+       if(count==3) { 
+          
+           cin>>d;
+           count++;
+        
+              }
+	
+	     if(count==4) { 
+       
+           cin>>e;
+           count++;
+        
+              }
+
+       if(count==5) { 
+         
+           cin>>f;
+           count++;       
+              
+              }
+
+       if(count==6) { 
+       
+           cin>>g;
+           count++;
+           
+              }
+     
+       if(count==7) { 
+          
+           cin>>h;
+           count++; 
+           
+              }
+
+       if(count==8) { 
+       
+           cin>>h;
+           count++;
+         
+              }
+
+       if(count==9) { 
+
+           cin>>i;
+           count++;
+        
+              }
+       
+        if(count==10) { 
+       
+           cin>>j;
+           count++;
+        
+              }
  
-        if(k==0)
-       { 
-       cint>>k;
-        }
-	else
-      {	
-       count++;
-        }
+        if(count==11) { 
+       
+           cin>>k;
+           count++;
+        
+              }
 
-       if(l==0)
-       { 
-       cint>>l;
-        }
-	else
-      {	
-       count++;
-        }
+       if(count==12) { 
+       
+           cin>>l;
+           count++;
+         
+              }
 
 
-    cout<<a;
-    cout<<b;
-    cout<<c;
-    cout<<d;
-    cout<<e;
-    cout<<f;
-    cout<<g;
-    cout<<h;
-    cout<<i;
-    cout<<j;
-    cout<<k;
-    cout<<l;
+    cout<<a<<"\n";
+    cout<<b<<"\n";
+    cout<<c<<"\n";
+    cout<<d<<"\n";
+    cout<<e<<"\n";
+    cout<<f<<"\n";
+    cout<<g<<"\n";
+    cout<<h<<"\n";
+    cout<<i<<"\n";
+    cout<<j<<"\n";
+    cout<<k<<"\n";
+    cout<<l<<"\n";
      getch();
        }
