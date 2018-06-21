@@ -2,7 +2,10 @@
 #include<conio.h>
 #include<stdlib.h>
 
-int menudesign();
+
+
+int load(); 
+void home();
 void jump(char);
 
 
@@ -10,20 +13,32 @@ using namespace std;
 int main()
 
  {
+   load();
    system("cls");
    char jmp;
     
-   menudesign();
+   home();  //calling Home page
    cin>>jmp;
    
    jump(jmp);
 }
 
 
-  
- 
+     int load()   //Loading...
+   {  
+      int l,m;
+      system("cls");
+      cout<<"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t\tLOADING";
+       
+	for( l=1;l<=4;l++)
+	   { cout<<".";
+	       } 
+	       
+        getch();
+	
+      }
 
-  int menudesign()
+     void home()
    { 
      
      char d1=177,lf=10,si=15;
@@ -42,7 +57,17 @@ int main()
     cout<<d1;  
 
      }
-         }
+   //Now Menu Middle Part;
+
+   cout<<lf<<lf<<"ITEMS\n\n";
+   cout<<"1.Non-Vegetarian\n";
+   cout<<"2.Vegetarian\n";
+   cout<<"3.Beverages\n";
+   cout<<"4.Soups\n";
+   cout<<"5.Continental\n";
+        }
+
+ 
 
  void jump(char jmp)
  {
@@ -60,7 +85,7 @@ int main()
  { 
   case '0':
   system("cls");
-  menudesign();
+  home();
   break;
  } 
      }
