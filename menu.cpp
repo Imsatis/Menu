@@ -23,12 +23,12 @@ using namespace std;
 int main()
 
  {
+   char jmp;            // Decliaration Var for JUmp one page to another; 
+  
    load();               // Function Calling Load 1st Interface
    
    system("cls");
-   
-   char jmp;            // Decliaration Var for JUmp one page to another; 
-    
+     
    home();             // calling Home page 2nd Interface
    
    cin>>jmp;          // User Input;
@@ -41,17 +41,16 @@ int main()
 
      void load()               // 1st Interface
    {  
-      int l,m;               // Var Decliaration;
 
       system("cls");      
      
-      gotoxy(25,15);       //Header Function Calling 
+      gotoxy(32,15);       //Header Function Calling 
       
       cout<<"LOADING...";
 
-      gotoxy(0,30);       //Header Function Calling 
+      gotoxy(0,15);       //Header Function Calling 
 
-      cout<<"press any key to continue..."
+      cout<<"press any key to continue...";
 	       
         getch();
 	
