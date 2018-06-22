@@ -1,38 +1,57 @@
+/*******************************************************************************************************************************************************************************************
+
+                                  /  Menu Project  \
+
+*******************************************************************************************************************************************************************************************/
+
+
 #include<iostream>
 #include<conio.h>
 #include<stdlib.h>
+#include<gotoxy.h>
 
 
-
-int load(); 
-void home();
+void load();         
+void home();              //Function Prototype;
 void jump(char);
 
 
 using namespace std;
+
+/***** Main Function *****/
+
 int main()
 
  {
-   load();
-   system("cls");
-   char jmp;
-    
-   home();  //calling Home page
-   cin>>jmp;
+   load();               // Function Calling Load 1st Interface
    
-   jump(jmp);
+   system("cls");
+   
+   char jmp;            // Decliaration Var for JUmp one page to another; 
+    
+   home();             // calling Home page 2nd Interface
+   
+   cin>>jmp;          // User Input;
+   
+   jump(jmp);        // Calling Function Jump Throwing jump Value; 
 }
 
 
-     int load()   //Loading...
+ /***** Load Function *****/
+
+     void load()               // 1st Interface
    {  
-      int l,m;
-      system("cls");
-      cout<<"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t\tLOADING";
-       
-	for( l=1;l<=4;l++)
-	   { cout<<".";
-	       } 
+      int l,m;               // Var Decliaration;
+
+      system("cls");      
+     
+      gotoxy(25,15);       //Header Function Calling 
+      
+      cout<<"LOADING...";
+
+      gotoxy(0,30);       //Header Function Calling 
+
+      cout<<"press any key to continue..."
 	       
         getch();
 	
