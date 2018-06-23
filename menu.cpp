@@ -5,6 +5,8 @@
 *******************************************************************************************************************************************************************************************/
 
 
+                 //tomorrow work is to design chinese properly
+
 #include<iostream>
 #include<conio.h>
 #include<stdlib.h>
@@ -15,7 +17,7 @@ void welcome();
 void home();              //Function Prototype;
 void home_switch();
 void chinese();
-void chinese_switch;
+void chinese_switch();
 
 using namespace std;
 
@@ -169,7 +171,7 @@ int main()
     cout<<"INVALID";
     home();                 /**if default control goto home loop process **/
     break;
-
+            }
  }
 
   /********************* Chinese Function ********************/
@@ -179,14 +181,44 @@ int main()
        gotoxy(30,10); 
        cout<<"1.Non-Vegetarian";
        
-       gotoxy();
+       //gotoxy();
        cout<<"2.Vegetarian";
 
-       gotoxy();
+       //gotoxy();
        cout<<"0.Go Back To Main Menu";
         }  
 
- jump=getch();
+   
+    void chinese_switch()
+  { 
+    char jump;   
+    cin>>jump;
+    
+    switch(jump)
+  {
+    case 1:
+    system("cls");          
+    cout<<"Non-Veg";
+    break;
+
+    case 2:
+    system("cls");
+    cout<<"Veg";
+    break;
+
+    case 0:
+    home();
+    break;
+
+    default:
+    chinese();
+    break;
+    
+     }  
+
+    }
+
+/** jump=getch();
  switch(jump)
  { 
   case '0':
@@ -195,4 +227,4 @@ int main()
   getch();
   break;
  } 
-     }
+     }**/
