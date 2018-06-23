@@ -1,6 +1,6 @@
 /*******************************************************************************************************************************************************************************************
 
-                                  /  Menu Project  \
+                                    /  Menu Project  \
 
 *******************************************************************************************************************************************************************************************/
 
@@ -11,39 +11,44 @@
 #include<gotoxy.h>
 
 
-void load();         
+void welcome();         
 void home();              //Function Prototype;
 void home_switch();
-
+void chinese();
+void chinese_switch;
 
 using namespace std;
 
-/***** Main Function *****/
+
+
+/******************** Main Function ********************/
+
 
 int main()
 
  {
   
-   load();               // Function Calling Load 1st Interface
+   welcome();               // Function Calling welcome 1st Interface
      
-   home();             // calling Home page 2nd Interface
-   
-   home_switch();        // Calling Function Jump Throwing jump Value; 
+   home();                 // calling Home page 2nd Interface
+      
 }
 
 
- /***** Load Function *****/
+ /************** Welcome Function *****************/
 
-     void load()               // 1st Interface
+
+
+     void welcome()                             // 1st Interface
    {  
 
       system("cls");      
      
-      gotoxy(32,15);       //Header Function Calling 
+      gotoxy(32,15);                         //Header Function Calling 
       
       cout<<"WELCOME...";
 
-      gotoxy(0,15);       //Header Function Calling 
+      gotoxy(0,15);                       //Header Function Calling 
 
       cout<<"press any key to continue...";
 	       
@@ -51,19 +56,28 @@ int main()
 	
       }
 
-     void home()
+
+/******************* Home Function ********************/
+
+ 
+      void home()
    { 
+    
      system("cls");
 
      char d1=177,lf=10,si=15;
      int i;
 
      cout<<lf;
-   for(i=0;i<80;i++)
+ 
+    for(i=0;i<80;i++)
   { 
-    cout<<d1; 
+     cout<<d1; 
+   
      }
+     
       gotoxy(33,1);   
+      
       cout<<si<<"SERVICE"<<si<<lf<<lf;	 
  
 
@@ -98,9 +112,12 @@ int main()
     gotoxy(29,3);
     cout<<"SELECT ANY OPTION  ";
 
+    home_switch();        // Calling Function Jump Throwing jump Value; 
 
 	}     
 
+
+/******************** Home Switch Function ********************/
  
 
  void home_switch()
@@ -114,6 +131,7 @@ int main()
     case '1':
     system("cls");
     cout<<"CHINESE";
+    chinese();
     break;
 
     case '2':
@@ -149,17 +167,32 @@ int main()
     default:
     gotoxy(32,1);
     cout<<"INVALID";
-    home();
+    home();                 /**if default control goto home loop process **/
     break;
 
  }
+
+  /********************* Chinese Function ********************/
+ 
+      void chinese()                    
+  { 
+       gotoxy(30,10); 
+       cout<<"1.Non-Vegetarian";
+       
+       gotoxy();
+       cout<<"2.Vegetarian";
+
+       gotoxy();
+       cout<<"0.Go Back To Main Menu";
+        }  
 
  jump=getch();
  switch(jump)
  { 
   case '0':
   system("cls");
-  home();
+  cout<<"hellow";
+  getch();
   break;
  } 
      }
