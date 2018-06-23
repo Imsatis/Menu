@@ -149,6 +149,7 @@ int main()
     default:
     gotoxy(32,1);
     cout<<"INVALID";
+    home();
     break;
 
  }
