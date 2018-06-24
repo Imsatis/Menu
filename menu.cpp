@@ -54,7 +54,7 @@ int main()
 
       cout<<"press any key to continue...";
 	       
-        getch();
+      getch();
 	
       }
 
@@ -131,7 +131,7 @@ int main()
     switch(jump)
   {
     case '1':
-    system("cls");
+    //system("cls");
     //cout<<"CHINESE";
     chinese();
     break;
@@ -178,6 +178,8 @@ int main()
  
       void chinese()                    
   { 
+       system("cls");
+
        gotoxy(30,10); 
        cout<<"1.Non-Vegetarian";
        
@@ -198,7 +200,7 @@ int main()
    
     void chinese_switch()
   { 
-    char jump;   
+    int jump;   
     cin>>jump;
     
     switch(jump)
@@ -218,6 +220,12 @@ int main()
     break;
 
     default:
+    
+    system("cls");
+    
+    gotoxy(30,15);
+    cout<<"INVALID SELCETION";
+    getch();
     chinese();
     break;
     
