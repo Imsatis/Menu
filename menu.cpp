@@ -46,11 +46,11 @@ int main()
 
       system("cls");      
      
-      gotoxy(32,15);                         //Header Function Calling 
-      
+      gotoxy(32,15);                         
+                                                            
       cout<<"WELCOME...";
 
-      gotoxy(0,15);                       //Header Function Calling 
+      gotoxy(0,15);                       
 
       cout<<"press any key to continue...";
 	       
@@ -193,10 +193,21 @@ int main()
        cout<<"SELECT ANY OPTION  ";
 
        chinese_switch();
+         
+	  }  
 
+     
+       chinese_non-veg()
+     {
+        
+        
 
-       }  
+       
 
+         }  
+       
+
+          
    
     void chinese_switch()
   { 
@@ -221,10 +232,11 @@ int main()
 
     default:
     
-    system("cls");
+    //system("cls");
     
-    gotoxy(30,15);
-    cout<<"INVALID SELCETION";
+    gotoxy(35,2);
+    cout<<"INVALID";
+
     getch();
     chinese();
     break;
