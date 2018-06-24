@@ -132,7 +132,7 @@ int main()
   {
     case '1':
     system("cls");
-    cout<<"CHINESE";
+    //cout<<"CHINESE";
     chinese();
     break;
 
@@ -181,12 +181,19 @@ int main()
        gotoxy(30,10); 
        cout<<"1.Non-Vegetarian";
        
-       //gotoxy();
+       gotoxy(30,1);
        cout<<"2.Vegetarian";
 
-       //gotoxy();
-       cout<<"0.Go Back To Main Menu";
-        }  
+       gotoxy(30,1);
+       cout<<"0.Go Back To Main Menu";   
+      
+       gotoxy(30,3);
+       cout<<"SELECT ANY OPTION  ";
+
+       chinese_switch();
+
+
+       }  
 
    
     void chinese_switch()
