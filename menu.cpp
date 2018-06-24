@@ -5,7 +5,7 @@
 *******************************************************************************************************************************************************************************************/
 
 
-                 //tomorrow work is to design chinese properly
+                 //tomorrow work is to non-veg
 
 #include<iostream>
 #include<conio.h>
@@ -17,6 +17,7 @@ void welcome();
 void home();              //Function Prototype;
 void home_switch();
 void menu();
+void menu_switch();
 void chinese();
 //void chinese_non-veg();
 void chinese_switch();
@@ -90,12 +91,12 @@ int main()
 
      }
     
-    gotoxy(32,1);
+    gotoxy(32,5);
     cout<<"1.Menu";
 
     
     gotoxy(32,1);
-    cout<<".COLLECTION";
+    cout<<"2.COLLECTION";
    
     gotoxy(32,1);
     cout<<"0.EXIT";
@@ -113,7 +114,7 @@ int main()
     
     system("cls");
 
-    gotoxy(32,2);
+    gotoxy(32,10);
     cout<<"1.CHINESE";
     
     gotoxy(32,1);
@@ -128,11 +129,65 @@ int main()
     gotoxy(32,1);
     cout<<"5.SOUPS";
 
+    gotoxy(32,1);
+    cout<<"0.MAIN MENU";
+
+    gotoxy(30,3);
+    cout<<"SELECT ANY OPTION  ";
+
+    menu_switch();
+
+ 
+        }    
+
+	
+    void menu_switch()
+  {
      
+    char jump;
 
+    cin>>jump;
+
+    switch(jump)
+   {
+    case '1':
+    chinese();
+    break;
+
+    case '2':
+    system("cls");
+    cout<<"INDIAN";
+    break;
+
+    case '3':
+    system("cls");
+    cout<<"CONTINENTAL";
+    break;
+
+    case '4':
+    system("cls");
+    cout<<"BEVERAGES";
+    break;
+
+    case '5':
+    system("cls");
+    cout<<"SOUPS";
+    break;
+
+    case '0':
+    home();
+    break;
+
+    default:
+    gotoxy(32,1);
+    cout<<"INVALID";
+    home();                 //if default control goto home loop process 
+    break;
+      }
   
-        }     
 
+   
+   }
 
 
 /******************** Home Switch Function ********************/
@@ -147,12 +202,13 @@ int main()
     switch(jump)
   {
     case '1':
-    //system("cls");
-    //cout<<"CHINESE";
     menu();
     break;
 
-    
+    case '2':
+    cout<<"collection";
+    break;
+
     case '0':
     system("cls");
     cout<<"EXIT";
@@ -179,7 +235,7 @@ int main()
        cout<<"2.Vegetarian";
 
        gotoxy(30,1);
-       cout<<"0.Go Back To Main Menu";   
+       cout<<"0.BACK";   
       
        gotoxy(30,3);
        cout<<"SELECT ANY OPTION  ";
@@ -211,7 +267,7 @@ int main()
     break;
 
     case 0:
-    home();
+    menu();
     break;
 
     default:
