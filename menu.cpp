@@ -16,9 +16,10 @@
 void welcome();         
 void home();              //Function Prototype;
 void home_switch();
+void menu();
 void chinese();
+//void chinese_non-veg();
 void chinese_switch();
-
 using namespace std;
 
 
@@ -88,7 +89,29 @@ int main()
     cout<<d1;  
 
      }
-           
+    
+    gotoxy(32,1);
+    cout<<"1.Menu";
+
+    
+    gotoxy(32,1);
+    cout<<".COLLECTION";
+   
+    gotoxy(32,1);
+    cout<<"0.EXIT";
+   
+    gotoxy(29,3);
+    cout<<"SELECT ANY OPTION  ";
+
+    home_switch();        // Calling Function Jump Throwing jump Value; 
+
+	}     
+
+
+       void menu()
+  {
+    
+    system("cls");
 
     gotoxy(32,2);
     cout<<"1.CHINESE";
@@ -104,19 +127,12 @@ int main()
     
     gotoxy(32,1);
     cout<<"5.SOUPS";
-    
-    gotoxy(32,1);
-    cout<<"6.COLLECTION";
-   
-    gotoxy(32,1);
-    cout<<"0.EXIT";
-   
-    gotoxy(29,3);
-    cout<<"SELECT ANY OPTION  ";
 
-    home_switch();        // Calling Function Jump Throwing jump Value; 
+     
 
-	}     
+  
+        }     
+
 
 
 /******************** Home Switch Function ********************/
@@ -133,34 +149,10 @@ int main()
     case '1':
     //system("cls");
     //cout<<"CHINESE";
-    chinese();
+    menu();
     break;
 
-    case '2':
-    system("cls");
-    cout<<"INDIAN";
-    break;
-
-    case '3':
-    system("cls");
-    cout<<"CONTINENTAL";
-    break;
-
-    case '4':
-    system("cls");
-    cout<<"BEVERAGES";
-    break;
-
-    case '5':
-    system("cls");
-    cout<<"SOUPS";
-    break;
-
-    case '6':
-    system("cls");
-    cout<<"COLLECTION";
-    break;
-
+    
     case '0':
     system("cls");
     cout<<"EXIT";
@@ -197,15 +189,7 @@ int main()
 	  }  
 
      
-       chinese_non-veg()
-     {
-        
-        
 
-       
-
-         }  
-       
 
           
    
@@ -255,3 +239,50 @@ int main()
   break;
  } 
      }**/
+
+
+
+/**
+
+ case '1':
+    //system("cls");
+    //cout<<"CHINESE";
+    chinese();
+    break;
+
+    case '2':
+    system("cls");
+    cout<<"INDIAN";
+    break;
+
+    case '3':
+    system("cls");
+    cout<<"CONTINENTAL";
+    break;
+
+    case '4':
+    system("cls");
+    cout<<"BEVERAGES";
+    break;
+
+    case '5':
+    system("cls");
+    cout<<"SOUPS";
+    break;
+
+    case '6':
+    system("cls");
+    cout<<"COLLECTION";
+    break;
+
+    case '0':
+    system("cls");
+    cout<<"EXIT";
+    break;
+
+    default:
+    gotoxy(32,1);
+    cout<<"INVALID";
+    home();                 //if default control goto home loop process 
+    break;
+**/
