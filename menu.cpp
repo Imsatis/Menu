@@ -337,16 +337,3 @@ int main()
        
         }   
 
-
-
-
-/** jump=getch();
- switch(jump)
- { 
-  case '0':
-  system("cls");
-  cout<<"hellow";
-  getch();
-  break;
- } 
-     }*/
