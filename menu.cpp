@@ -107,7 +107,9 @@ int main()
     home_switch();        // Calling Function Jump Throwing jump Value; 
 
 	}     
-     
+
+/******************** Home Switch Function ********************/
+
  void home_switch()
  {  
     char jump;
@@ -223,7 +225,7 @@ int main()
    }
 
 
-/******************** Home Switch Function ********************/
+
  
 
   /********************* Chinese Function ********************/
