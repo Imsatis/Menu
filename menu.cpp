@@ -107,7 +107,40 @@ int main()
     home_switch();        // Calling Function Jump Throwing jump Value; 
 
 	}     
+     
+ void home_switch()
+ {  
+    char jump;
 
+    cin>>jump;
+
+    switch(jump)
+  {
+    case '1':
+    menu();
+    break;
+
+    case '2':
+    cout<<"collection";
+    break;
+
+    case '0':
+    system("cls");
+    cout<<"EXIT";
+    break;
+
+    default:
+    gotoxy(32,1);
+    cout<<"INVALID";
+    home();                 /**if default control goto home loop process **/
+    break;
+            }
+ }
+
+
+
+
+/****************** Menu Function ******************/
 
        void menu()
   {
@@ -177,7 +210,7 @@ int main()
     case '0':
     home();
     break;
-
+    	   
     default:
     gotoxy(32,1);
     cout<<"INVALID";
@@ -192,35 +225,6 @@ int main()
 
 /******************** Home Switch Function ********************/
  
-
- void home_switch()
- {  
-    char jump;
-
-    cin>>jump;
-
-    switch(jump)
-  {
-    case '1':
-    menu();
-    break;
-
-    case '2':
-    cout<<"collection";
-    break;
-
-    case '0':
-    system("cls");
-    cout<<"EXIT";
-    break;
-
-    default:
-    gotoxy(32,1);
-    cout<<"INVALID";
-    home();                 /**if default control goto home loop process **/
-    break;
-            }
- }
 
   /********************* Chinese Function ********************/
  
@@ -242,10 +246,7 @@ int main()
 
        chinese_switch();
          
-	  }  
-
-     
-
+	  }
 
           
    
@@ -284,6 +285,60 @@ int main()
      }  
 
     }
+
+/***************** NON-VEG Function *******************/
+ 
+// work pending
+
+
+  __   chinese_non-veg();
+{   
+       //variable decliaration;
+
+    string 1item,2item,3item,4item,5item,6item,7item,8item,9item,10item,11item,12item,     13item,14item,15item;
+    
+    cout<<1item;
+    cout<<2item;
+    cout<<3item; 
+    cout<<4item; 
+    cout<<5item; 
+    cout<<6item;
+    cout<<7item;
+    cout<<8item;
+    cout<<9item;
+    cout<<10item;
+    cout<<11item; 
+    cout<<12item;
+    cout<<13item;
+    cout<<14item;
+    cout<<15item;
+   
+   non-veg_switch();
+
+    }    
+
+    __  non-veg_switch()
+   {
+     int jump;
+     cin>>jump;
+
+       switch(jump)
+     { 
+        case 1:
+	non-veg_edit();
+	break;
+       
+       }
+    }           //work pending  
+
+       non-veg_edit();
+    {
+       
+       
+        }   
+
+
+
 
 /** jump=getch();
  switch(jump)
