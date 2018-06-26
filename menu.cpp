@@ -5,7 +5,7 @@
 *******************************************************************************************************************************************************************************************/
 
 
-                 //tomorrow work is to non-veg
+    //tomorrow work is to edit non-veg function and the logic
 
 #include<iostream>
 #include<conio.h>
