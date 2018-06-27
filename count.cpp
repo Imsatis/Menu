@@ -1,4 +1,5 @@
-#include<iosteam>
+#include<iostream>
+#include<conio.h>
 
 using namespace std;
 
@@ -7,9 +8,12 @@ using namespace std;
 {
    int count;
 
-   count++;
-   cout<<count;
-   count++;
-   cout<<count;
-   getch();
+   string str;
+
+ //**  count++;
+       cout<<count;
+       count++;
+       cout<<"\n"<<count;
+       cout<<"\nhi"<<str;
+       getch();
 }    
