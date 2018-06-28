@@ -11,7 +11,7 @@ using namespace std;
    string a,b,c,d;
      
      switch(chk)
-     {  if(a==)
+     {  if(a.empty())
        { 
          getline(cin,a);
 	 cin>>chk;
@@ -23,11 +23,11 @@ using namespace std;
        { 
         count++;
          }
-        if(b==char)
+        if(b.empty())
        { 
          getline(cin,b);
          cin>>chk;
-	 case 0:
+	 case 1:
 	 break;
 
 	 }
@@ -36,11 +36,11 @@ using namespace std;
         count++;
          }
   
-       if(c==char)
+       if(c.empty())
        { 
          getline(cin,c);
          cin>>chk;
-	 case 0:
+	 case 2:
 	 break;
 
 	 }
@@ -49,11 +49,11 @@ using namespace std;
         count++;
          }
 
-        if(d==char)
+        if(d.empty())
        { 
          getline(cin,d);
          cin>>chk;
-	 case 0:
+	 case 3:
 	 break;
 
 	 }
@@ -65,4 +65,8 @@ using namespace std;
       }
 
        getch();
+
+
+
+
 }    
