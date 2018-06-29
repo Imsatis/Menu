@@ -20,16 +20,16 @@ using namespace std;
        { 
          getline(cin,a);
 	 count++;
-          if(a==chk)        //error
-	    break;
+         // if(a==chk)        //error
+	  //  break;
            
           }
         if(count==2)
        { 
          getline(cin,b);
 	 count++;
-          if(b==chk)
-	  break;
+         // if(b==chk)
+	 // break;
 
 
 	 }
@@ -39,8 +39,8 @@ using namespace std;
          getline(cin,c);
         
 	 count++;
-          if(c==chk)
-	  break;
+         // if(c==chk)
+	 // break;
  
 	 }
     
@@ -49,8 +49,8 @@ using namespace std;
        { 
          getline(cin,d);
 	 count++;
-         if(d==chk)
-	  break;
+        // if(d==chk)
+	//  break;
 
 
           }
