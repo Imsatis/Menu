@@ -1,16 +1,16 @@
 #include<iostream>
 #include<conio.h>
-
+void check()
 using namespace std;
 
 
 
     void esc()
- {  int x,z; cin>>x>>z; 
+ { 
+    int n=0;
     string str;
-    
-    str=getch();
-    cout<<"str "<<str;
+    cin.get(str);
+    cout<<"\n str "<<str;
 
     }   
  
@@ -18,8 +18,15 @@ using namespace std;
     int main()
 
 {
-   esc();              
-   int count=1; 
+   esc();   
+   getch();
+   return 0;
+
+}  
+
+  void check()
+{  
+ int count=1; 
    char chk=27;
   
    string a,b,c,d;
@@ -30,7 +37,6 @@ using namespace std;
        if(count==1)
        { cout<<"\nenter a";
          getline(cin,a);
-	 cin>>a;
 	 count++;
          // if(a==chk)        //error
 	  //  break;
@@ -39,7 +45,6 @@ using namespace std;
         if(count==2)
        { cout<<"b";
          getline(cin,b);
-	 cin>>b;
 	 count++;
          // if(b==chk)
 	 // break;
@@ -70,8 +75,4 @@ using namespace std;
        }
 
       cout<<"a"<<a<<"\nb"<<b<<"\nc"<<c<<"\nd"<<d<<"\ncount "<<count; 
-       getch();
-   return 0;
-
-}    
-
+}
