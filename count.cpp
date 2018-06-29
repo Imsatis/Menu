@@ -2,12 +2,23 @@
 #include<conio.h>
 
 using namespace std;
+
+
+
+    void esc()
+ {
+    string str;
+    cin>>a;
+    str=getch();
+    cout<<str;
+
+    }   
  
 
     int main()
 
 {
-                 
+   esc();              
    int count=1; 
    char chk=27;
   
