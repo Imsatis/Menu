@@ -8,7 +8,7 @@ using namespace std;
 
 {
    
-   int count=1,chk;
+   int count=1; char chk=27;
   
    string a,b,c,d;
 
@@ -18,43 +18,45 @@ using namespace std;
        if(count==1)
        { 
          getline(cin,a);
-	 cin>>chk;
 	 count++;
-	 if(chk==0)
-	    break;
+          if (a==chk)
+	  break;
+           
           }
         if(count==2)
        { 
          getline(cin,b);
-         cin>>chk;
 	 count++;
-         if(chk==0)
-	    break;
+          if (a==chk)
+	  break;
+
 
 	 }
   
        if(count==3)
        { 
          getline(cin,c);
-         cin>>chk;
+        // cin>>chk;
 	 count++;
-         if(chk==0)
-	    break; 
+          if (a==chk)
+	  break;
+ 
 	 }
     
 
         if(count==4)
        { 
          getline(cin,d);
-         cin>>chk;
+        // cin>>chk;
 	 count++;
-         if(chk==0)
-          break;
+          if (a==chk)
+	  break;
+
 
           }
        }
 
-      cout"a"<<a<<"\nb"<<b<<"\nc"<<c<<"\nd"<<d; 
+      cout<<"a"<<a<<"\nb"<<b<<"\nc"<<c<<"\nd"<<d<<"\ncount "<<count; 
        getch();
    return 0;
 
