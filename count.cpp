@@ -7,7 +7,7 @@ using namespace std;
     int main()
 
 {
-   
+                 
    int count=1; 
    char chk=27;
   
@@ -20,7 +20,7 @@ using namespace std;
        { 
          getline(cin,a);
 	 count++;
-          if(a==chk)
+          if(a==chk)        //error
 	    break;
            
           }
