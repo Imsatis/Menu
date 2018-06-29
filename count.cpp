@@ -6,11 +6,11 @@ using namespace std;
 
 
     void esc()
- {
+ {  int x,z; cin>>x>>z; 
     string str;
-    cin>>a;
+    
     str=getch();
-    cout<<str;
+    cout<<"str "<<str;
 
     }   
  
@@ -24,20 +24,22 @@ using namespace std;
   
    string a,b,c,d;
 
-     for (int o=0;o<1;o++)
+     for (int o=0;o<2;o++)
      {
        
        if(count==1)
-       { 
+       { cout<<"\nenter a";
          getline(cin,a);
+	 cin>>a;
 	 count++;
          // if(a==chk)        //error
 	  //  break;
            
           }
         if(count==2)
-       { 
+       { cout<<"b";
          getline(cin,b);
+	 cin>>b;
 	 count++;
          // if(b==chk)
 	 // break;
@@ -46,7 +48,7 @@ using namespace std;
 	 }
   
        if(count==3)
-       { 
+       { cout<<"c";
          getline(cin,c);
         
 	 count++;
@@ -57,7 +59,7 @@ using namespace std;
     
 
         if(count==4)
-       { 
+       { cout<<"d";
          getline(cin,d);
 	 count++;
         // if(d==chk)
