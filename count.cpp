@@ -14,9 +14,10 @@ using namespace std;
       {
          cout<<"\n";
         }
-     cout<<(int)ch;	
-     cout<<ch;
-     str += ch;
+    // cout<<int (ch);	
+     if(ch>=32&&ch<=256)
+    { cout<<ch;
+     str += ch;}
         }
 
      cout <<"\n"<<str;
