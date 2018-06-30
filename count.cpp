@@ -14,6 +14,7 @@ using namespace std;
       {
          cout<<"\n";
         }
+     cout<<(int)ch;	
      cout<<ch;
      str += ch;
         }
