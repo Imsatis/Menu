@@ -15,7 +15,12 @@ using namespace std;
          cout<<"\n";
         }
     // cout<<int (ch);	
-     if(ch>=32&&ch<=256)
+     if(ch==8)
+     {  
+        cout<<
+       
+       }
+
     { cout<<ch;
      str += ch;}
         }
