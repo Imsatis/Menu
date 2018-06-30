@@ -4,16 +4,21 @@ void check();
 using namespace std;
 
 
-    void chk()
+    int chk()
     {
      string str = "";
      char ch;
-     while ((ch = std::cin.get()) != 27) 
+     while ((ch = getch()) != 27) 
      {
+     if (ch==13)
+      {
+         cout<<"\n";
+        }
+     cout<<ch;
      str += ch;
         }
 
-     cout << str;
+     cout <<"\n"<<str;
 
       return 0;
 
