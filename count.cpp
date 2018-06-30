@@ -1,16 +1,38 @@
 #include<iostream>
 #include<conio.h>
-void check()
+void check();
 using namespace std;
 
 
+    void chk()
+    {
+     string str = "";
+     char ch;
+     while ((ch = std::cin.get()) != 27) 
+     {
+     str += ch;
+        }
+
+     cout << str;
+
+      return 0;
+
+       }
 
     void esc()
  { 
-    int n=0;
-    string str;
-    cin.get(str);
-    cout<<"\n str "<<str;
+    string str="";
+    char ch;
+    bool loop=true;
+    while(loop)
+    {
+     ch=cin.get();
+     cout<<"hello";
+     str+=ch;
+     if (ch==27)
+     loop=false;
+     }
+     cout<<"\nstr "<<str;
 
     }   
  
@@ -18,7 +40,9 @@ using namespace std;
     int main()
 
 {
-   esc();   
+   //esc();
+   chk();
+   //check();
    getch();
    return 0;
 
