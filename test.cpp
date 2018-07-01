@@ -13,11 +13,20 @@ class my
      
      } 
      
-   void body(bool life)
+   void body(bool life,int loop)
    { 
+    
+     
      while(life)
      {  
         me++; 
+      cout<<"\n"<<me;	
+      if(me==loop)
+      {
+        life=false; 
+	int no=0;
+	no++;
+	cout<<"\nfinish"<<no;                                                                                                                                                                                                                                                     }
       
        }
     }
@@ -26,16 +35,21 @@ class my
    int main()
  {
      my life(0);
-     int years=1000;
+     int years=2;
      bool yrs=true;
     
     while (yrs)
     {
-       life.body(yrs);
+       life.body(yrs,years);
+       cout<<"\n2nd"<<life.me;
        years--;
-       cout<<"\n"<<life.body().me;
-       if(yrs==0)
-       yrs==false;
+       if(years==0)
+      {
+      int co=0;
+      co++;
+      cout<<"\n"<<co;
+      yrs=false;
+        }
      }
 
      getch();
