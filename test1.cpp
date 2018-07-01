@@ -10,11 +10,11 @@
    while(life)
    {
      me++;
-     //cout<<"\n"<<me;
+     cout<<"\n"<<me;
      if(me==year)
      {
        life=false;
-       cout<<"\nme"<<me<<"\nbool "<<life;
+       //cout<<"\nme"<<me;
        }
 
       }
@@ -33,7 +33,7 @@
      no++;
      cout<<"\nno "<<no;
      loop(yr,year);
-     cout<<"hellow";
+     //cout<<"hellow";
      year--;
      if (year==0)
      {
