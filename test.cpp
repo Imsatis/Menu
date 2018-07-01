@@ -20,7 +20,7 @@ class my
      while(life)
      {  
         me++; 
-      cout<<"\n"<<me;	
+     // cout<<"\n"<<me;	
       if(me==loop)
       {
         life=false; 
@@ -39,7 +39,7 @@ class my
     while (yrs)
     {
        life.body(years);
-       chk++;
+       chk++;cout<<"\n chk "<<chk;
        years--;
        if(chk==2)
        break;
@@ -48,7 +48,7 @@ class my
       yrs=false;
         }
      }
-
+     cout<<"\n me "<<me;
      getch();
  } 
 
