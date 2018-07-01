@@ -13,9 +13,9 @@ class my
      
      } 
      
-   void body(bool life,int loop)
+   void body(int loop)
    { 
-    
+    bool life=true;
      
      while(life)
      {  
@@ -33,14 +33,16 @@ class my
    int main()
  {
      my life(0);
-     int years=2;
+     int years=10,chk=0;
      bool yrs=true;
     
     while (yrs)
     {
-       life.body(yrs,years);
-       
+       life.body(years);
+       chk++;
        years--;
+       if(chk==2)
+       break;
        if(years==0)
       {
       yrs=false;
