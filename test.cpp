@@ -33,7 +33,7 @@ class my
    int main()
  {
      my life(0);
-     int years=10,chk=0;
+     int years=10,chk=0,val=10000000;
      bool yrs=true;
     
     while (yrs)
@@ -48,7 +48,7 @@ class my
       yrs=false;
         }
      }
-     cout<<"\n me "<<me;
+     cout<<"\n me "<<life.me;
      getch();
  } 
 
