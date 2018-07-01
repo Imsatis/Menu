@@ -24,9 +24,7 @@ class my
       if(me==loop)
       {
         life=false; 
-	int no=0;
-	no++;
-	cout<<"\nfinish"<<no;                                                                                                                                                                                                                                                     }
+	}
       
        }
     }
@@ -41,13 +39,10 @@ class my
     while (yrs)
     {
        life.body(yrs,years);
-       cout<<"\n2nd"<<life.me;
+       
        years--;
        if(years==0)
       {
-      int co=0;
-      co++;
-      cout<<"\n"<<co;
       yrs=false;
         }
      }
