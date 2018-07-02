@@ -15,20 +15,21 @@ class my
      
    void body(int loop)
    { 
-    cout<<"catch "<<loop;getch();
+    cout<<"\nstep 2nd 2nd loop start  catch "<<loop;getch();
     bool life=true;
      
      while(life)
      {  
         me++; 
-     cout<<"\n"<<me<<"loop= "<<loop;
+     cout<<"\nstep 3rd  "<<me<<"loop= "<<loop;getch();
 
       if(me==loop)
       {
         life=false; 
+	cout<<"\nstop loop 2nd end bye bye "<<life;getch();
 	}
      
-       cout<<"life "<<life;
+       cout<<"again loop 2nd life "<<life;getch();
 
        }
     }
@@ -41,10 +42,10 @@ class my
      bool yrs=true;
     
     while (yrs)
-    {  cout<<"throw "<<years;getch();
+    {  cout<<"step 1: loop 1st start  throw "<<years;getch();
        life.body(years);
        years--;
-       cout<<"\n chk "<<years;
+       cout<<"\n years"<<years;
 
        
        if(years==0)
