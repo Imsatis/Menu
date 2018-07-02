@@ -7,7 +7,6 @@ using namespace std;
 class my
 {  
    int me;
-  // bool life;
 
    public:
     my(int godgift)
@@ -27,7 +26,7 @@ class my
       if(me==death)
       {
         life=false; 
-	hell();
+        return hell();
 
 	}
 
@@ -36,15 +35,18 @@ class my
  };    
 
    int main()
- {
+ {   
      my life(0);
+  
+     //int more=
      life.body(true,1000);
-
     
      getch();
  } 
 
- void hell()
+ void  hell()
  {
    cout<<"\nhell";
+   //int rtrn=1000;
+   //return rtrn;
     }
