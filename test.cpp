@@ -15,17 +15,21 @@ class my
      
    void body(int loop)
    { 
+    cout<<"catch "<<loop;getch();
     bool life=true;
      
      while(life)
      {  
         me++; 
-     // cout<<"\n"<<me;	
+     cout<<"\n"<<me<<"loop= "<<loop;
+
       if(me==loop)
       {
         life=false; 
 	}
-      
+     
+       cout<<"life "<<life;
+
        }
     }
  };    
@@ -33,16 +37,16 @@ class my
    int main()
  {
      my life(0);
-     int years=10,chk=0,val=10000000;
+     int years=2;
      bool yrs=true;
     
     while (yrs)
-    {
+    {  cout<<"throw "<<years;getch();
        life.body(years);
-       chk++;cout<<"\n chk "<<chk;
        years--;
-       if(chk==2)
-       break;
+       cout<<"\n chk "<<years;
+
+       
        if(years==0)
       {
       yrs=false;
