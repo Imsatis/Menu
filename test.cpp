@@ -1,35 +1,35 @@
 #include<iostream>
 #include<conio.h>
+void hell();
 
 using namespace std;
 
 class my
 {  
-   public:
    int me;
-    my(int skill)
+  // bool life;
+
+   public:
+    my(int godgift)
    {
-     me=skill;
+     me=godgift;
      
      } 
      
-   void body(int loop)
+   void body(bool life,int death)
    { 
-    cout<<"\nstep 2nd 2nd loop start  catch "<<loop;getch();
-    bool life=true;
-     
+        
      while(life)
      {  
-        me++; 
-     cout<<"\nstep 3rd  "<<me<<"loop= "<<loop;getch();
+        me++;
+	cout<<"\n"<<me;
 
-      if(me==loop)
+      if(me==death)
       {
         life=false; 
-	cout<<"\nstop loop 2nd end bye bye "<<life;getch();
+	hell();
+
 	}
-     
-       cout<<"again loop 2nd life "<<life;getch();
 
        }
     }
@@ -38,23 +38,13 @@ class my
    int main()
  {
      my life(0);
-     int years=2;
-     bool yrs=true;
-    
-    while (yrs)
-    {  cout<<"step 1: loop 1st start  throw "<<years;getch();
-       life.body(years);
-       years--;
-       cout<<"\n years"<<years;
+     life.body(true,1000);
 
-       
-       if(years==0)
-      {
-      yrs=false;
-        }
-     }
-     cout<<"\n me "<<life.me;
+    
      getch();
  } 
 
-  
+ void hell()
+ {
+   cout<<"\nhell";
+    }
