@@ -1,6 +1,9 @@
 #include<iostream>
 
 
+         //testing for edit environment by user;
+
+
 using namespace std;
 
     int main()
@@ -8,13 +11,13 @@ using namespace std;
 	  string a,b,c,d,e,f,g,h,i,j,k,l;
    
       int count=0;
+
        if(a==0)
          { cin>>a;
+	   count++;
+	   
 	  }
-	 else
-	{ 
-	  count++;
-	 }
+	
        
        if(b==0)
        { 

@@ -2,7 +2,7 @@
 #include<conio.h>
 void check();
 using namespace std;
-
+                         //while typing checking press keys;
 
     int chk()
     {
@@ -17,12 +17,13 @@ using namespace std;
     // cout<<int (ch);	
      if(ch==8)
      {  
-        cout<<
+       // cout<<
        
        }
 
-    { cout<<ch;
-     str += ch;}
+     cout<<ch;
+     str += ch;
+     
         }
 
      cout <<"\n"<<str;
@@ -52,8 +53,8 @@ using namespace std;
     int main()
 
 {
-   //esc();
-   chk();
+   esc();
+   //chk();
    //check();
    getch();
    return 0;
