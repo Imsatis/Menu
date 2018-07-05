@@ -1,0 +1,54 @@
+#include<iostream>
+#include<conio.h>
+void hell();
+
+                           //Human_Class example
+
+using namespace std;
+
+class my
+{  
+   int me;
+
+   public:
+    my(int godgift)         //udd constructor;
+   {
+     me=godgift;
+     
+     } 
+     
+   int body(bool life,int death)
+   { 
+        
+     while(life)
+     {  
+        me++;
+
+      if(me==death)
+      {
+        life=false; 
+        return hell();
+
+	}
+
+       }
+    }
+ };    
+
+   int main()
+ {   
+     my life(0);
+  
+     life.body(true,1000);
+    
+     getch();
+ } 
+
+ void  hell()
+ {
+   cout<<"\nhe
+   
+   ll";
+   //int rtrn=1000;
+   return 0;
+    }
