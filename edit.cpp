@@ -12,8 +12,10 @@ class data {                           //class
      int count;	
 
      public:
-           
+
+    //space is terminating the line;       
        data() {
+
       
       ifstream read_count;
       read_count.open("data.txt");      //udd constructor for reading count value;
@@ -21,19 +23,53 @@ class data {                           //class
 
       ifstream read_item;
       read_item.open("menu_data.txt");      //udd constructor for reading items;    
-      read_item>>a>>b>>c>>d>>e>>f>>g>>h>>i>>j>>k>>l;
+      a=reading(read_item);
+      b=reading(read_item);
+      c=reading(read_item);
+      d=reading(read_item);
+      e=reading(read_item);
+      f=reading(read_item);
+      g=reading(read_item);
+      h=reading(read_item);
+      i=reading(read_item);
+      j=reading(read_item);
+      k=reading(read_item);
+      l=reading(read_item);
             
+            //>>a>>b>>c>>d>>e>>f>>g>>h>>i>>j>>k>>l;
          }
 
-     void save_file(int &count) {
 
-      ofstream save("data.txt");
-      save<<count; 
-       
+        string reading(ifstream &read_item) {
+
+            char ch;
+            string temp;
+
+             while((read_item.get(ch)&&ch!='\n')) {
+
+                  temp+=ch;
+                  }
+               return temp;   
+           }
+
+     void save_file() {
+
+     	char want;
+
+      cout<<"do you want to save the data Y/N";
+      want=getch();
+      
+      if(want=='Y'||want=='y') { 
+      ofstream save_count("data.txt");
+      save_count<<count;
+
+      ofstream save_item("menu_data.txt"); 
+      save_item<<a<<"\n"<<b<<"\n"<<c<<"\n"<<d<<"\n"<<e<<"\n"<<f<<"\n"<<g<<"\n"<<h<<"\n"<<i<<"\n"<<j<<"\n"<<k<<"\n"<<l; 
+               }
          } 
 
 
-        data(int a) {
+        data(int x) {
       
       ifstream read;
       read.open("menu_data.txt");
@@ -41,7 +77,7 @@ class data {                           //class
             
          }
 
-     void save_file( ) {
+     void save_file(int y) {
 
       ofstream save("menu_data.txt");
       //save<<a<<"\n"<<b<<"\n"<<c<<"\n"<<d<<"\n"<<e<<"\n"<<f<<"\n"<<g<<"\n"<<h<<"\n"<<i<<"\n"<<j<<"\n"<<k<<"\n"<<l<<"\n"; 
@@ -177,40 +213,40 @@ class data {                           //class
       int ino=1;
 
   if(ino<count)
-    cout<<"\n"<<ino<<" "<<a;  ino++;
+    cout<<ino<<" "<<a<<"\n";  ino++;
   
   if(ino<count)  
-    cout<<"\n"<<ino<<" "<<b;  ino++;
+    cout<<ino<<" "<<b<<"\n";  ino++;
 
   if(ino<count)   
-    cout<<"\n"<<ino<<" "<<c;  ino++;
+    cout<<ino<<" "<<c<<"\n";  ino++;
 
   if(ino<count)   
-    cout<<"\n"<<ino<<" "<<d;  ino++;
+    cout<<ino<<" "<<d<<"\n";  ino++;
 
   if(ino<count)   
-    cout<<"\n"<<ino<<" "<<e;  ino++;
+    cout<<ino<<" "<<e<<"\n";  ino++;
 
   if(ino<count)
-    cout<<"\n"<<ino<<" "<<f;  ino++;
+    cout<<ino<<" "<<f<<"\n";  ino++;
 
   if(ino<count)
-    cout<<"\n"<<ino<<" "<<g;  ino++;
+    cout<<ino<<" "<<g<<"\n";  ino++;
 
   if(ino<count)
-    cout<<"\n"<<ino<<" "<<h;  ino++;
+    cout<<ino<<" "<<h<<"\n";  ino++;
 
   if(ino<count)
-    cout<<"\n"<<ino<<" "<<i;  ino++;
+    cout<<ino<<" "<<i<<"\n";  ino++;
 
   if(ino<count)
-    cout<<"\n"<<ino<<" "<<j;  ino++;
+    cout<<ino<<" "<<j<<"\n";  ino++;
     
   if(ino<count)
-    cout<<"\n"<<ino<<" "<<k;  ino++;
+    cout<<ino<<" "<<k<<"\n";  ino++;
 
   if(ino<count)
-    cout<<"\n"<<ino<<" "<<l<<"\n";  ino++;
+    cout<<ino<<" "<<l<<"\n";  ino++;
     
           }  
 
@@ -223,9 +259,11 @@ class data {                           //class
            data object;
 
            object.show();
-           getch();
+           //getch();
 
            object.edit();
+
+           object.save_file();
 
            object.show();
            getch();

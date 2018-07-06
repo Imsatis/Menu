@@ -1,19 +1,11 @@
-apple
-papaya
-orange
-mango
-kiwi
-apple
-papaya
-orange
-mango
-kiwi
-apple
-papaya
-orange
-mango
-kiwi
-apple
-papaya
-orange
-mango
+apple mango
+banana kiwi
+chiken rice
+chiken chowmin
+chilly chiken
+chiken manchurian
+mango juice
+
+
+
+
