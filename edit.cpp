@@ -6,7 +6,7 @@
 
 using namespace std;
 
-class data {
+class data {                           //class 
 
      string a,b,c,d,e,f,g,h,i,j,k,l;
      int count;	
@@ -16,11 +16,11 @@ class data {
        data() {
       
       ifstream read_count;
-      read_count.open("data.txt");
+      read_count.open("data.txt");      //udd constructor for reading count value;
       read_count>>count;
 
       ifstream read_item;
-      read_item.open("menu_data.txt");
+      read_item.open("menu_data.txt");      //udd constructor for reading items;    
       read_item>>a>>b>>c>>d>>e>>f>>g>>h>>i>>j>>k>>l;
             
          }
@@ -53,7 +53,7 @@ class data {
 
 
          void edit() {
-
+                                    //edit function edit the items by user
          	string str;
 
            switch(count) {
@@ -145,9 +145,9 @@ class data {
                  } 	
          }     
 
-
+           
      string edit_mode( ) {
-
+                                             //edit mode returnable function
         char ch;
         string st;
         while((ch=getch())!=27) {
