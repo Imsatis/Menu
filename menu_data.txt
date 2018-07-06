@@ -17,14 +17,3 @@ apple
 papaya
 orange
 mango
-kiwi
-apple
-papaya
-orange
-mango
-kiwi
-apple
-papaya
-orange
-mango
-kiwi
