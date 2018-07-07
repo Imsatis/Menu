@@ -9,14 +9,6 @@
 
   //using namespace std;
 
-  class testing {
-
-  	void print() {
-  		cout<<"testing";
-  	}
-  	cin>>a;
-  };
-
 
   class HOME {
 
