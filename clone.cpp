@@ -7,8 +7,10 @@
 
 ////////////////////////
 
-  //using namespace std;
+  //using namespace std;          //*RECURSION TESTED....
 
+
+                       //**Tomorrow work is to make a logic recursion free code
 
   class HOME {
 
@@ -171,7 +173,7 @@
     gotoxy(32,1);
     //cout<<"INVALID";
     menu();
-                     //if default control goto home loop process 
+                      
     break;
        } cout<<"test";getch();
      }  
