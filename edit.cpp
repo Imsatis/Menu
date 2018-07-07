@@ -1,6 +1,17 @@
 #include<iostream>
 #include<conio.h>
 #include<fstream>
+#include<stdlib.h>
+#include<string.h>
+
+       ///save error after end the vaiable;
+
+
+////////pending work is to 
+////////1.check errors properly in edit mode;
+////////2.delete logic;
+////////3.so on;
+
 
          //testing for edit environment by user;
 
@@ -23,6 +34,8 @@ class data {                           //class
 
       ifstream read_item;
       read_item.open("menu_data.txt");      //udd constructor for reading items;    
+     
+
       a=reading(read_item);
       b=reading(read_item);
       c=reading(read_item);
@@ -56,7 +69,8 @@ class data {                           //class
 
      	char want;
 
-      cout<<"do you want to save the data Y/N";
+      if(count!=13) {
+      cout<<"\n\ndo you want to save the data Y/N";
       want=getch();
       
       if(want=='Y'||want=='y') { 
@@ -65,8 +79,18 @@ class data {                           //class
 
       ofstream save_item("menu_data.txt"); 
       save_item<<a<<"\n"<<b<<"\n"<<c<<"\n"<<d<<"\n"<<e<<"\n"<<f<<"\n"<<g<<"\n"<<h<<"\n"<<i<<"\n"<<j<<"\n"<<k<<"\n"<<l; 
-               }
-         } 
+
+                   }
+
+            show();
+           
+            }
+
+         else 
+        cout<<"\n\n\t\t\t\tStorage is full";
+             
+      } 
+
 
 
         data(int x) {
@@ -89,8 +113,11 @@ class data {                           //class
 
 
          void edit() {
-                                    //edit function edit the items by user
+           
+           //system("cls");                         //edit function edit the items by user
          	string str;
+
+          show();
 
            switch(count) {
 
@@ -162,7 +189,7 @@ class data {                           //class
               str=edit_mode();
               j=str;
               if(str=="")
-                break;                                  
+                break;                                 
 
            case 11:
               cout<<"11.";
@@ -176,14 +203,16 @@ class data {                           //class
               str=edit_mode();
               l=str;
               if(str=="")
-                break;                  
+                break;  
+
+                                
  
                  } 	
          }     
 
            
      string edit_mode( ) {
-                                             //edit mode returnable function
+        const char *temp;                                     //edit mode returnable function
         char ch;
         string st;
         while((ch=getch())!=27) {
@@ -192,13 +221,20 @@ class data {                           //class
             st+=ch;
                 
           if(ch==13) {
-
+            
             cout<<"\n";
             break;
               
               }
-           }   
-                
+           }  
+
+            /*if(ch==13){
+              strlen(temp);
+              if(*temp<2)
+                st=count;
+                return st;*/
+            
+                           
             if (ch==27) {
               st="";
              return st;
@@ -210,6 +246,8 @@ class data {                           //class
 
 
      void show() {
+
+      system("cls");
       int ino=1;
 
   if(ino<count)
@@ -258,14 +296,14 @@ class data {                           //class
 
            data object;
 
-           object.show();
+           //object.show();
            //getch();
 
            object.edit();
 
            object.save_file();
 
-           object.show();
+           //object.show();
            getch();
 
         }
