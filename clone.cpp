@@ -32,7 +32,7 @@
 	       
       getch();
 
-      home();cout<<"hello";getch();
+      home();cout<<"hello";getch();         
 	
       }
 
@@ -43,7 +43,7 @@
 
      int jump; 
     
-     do {
+     do {                        //2nd INTERFACE
 
      system("cls");
 
@@ -102,9 +102,9 @@
     cout<<"INVALID";
     break;*/
        }
-       if (jump!=0)
+       if (jump!=0)                   //END OF 2nd INTERFAEE 
         cout<<"loop";
-     }while(jump!=0); 
+     }while(jump!=0);                
    }
 
 
@@ -116,7 +116,7 @@
     cout<<"1.CHINESE";
     
     gotoxy(32,1);
-    cout<<"2.INDIAN";
+    cout<<"2.INDIAN";                //CURRENT 3RD INTERFACE
    
     gotoxy(32,1);
     cout<<"3.CONTINENTAL";
@@ -171,9 +171,9 @@
     	   
     default:
     gotoxy(32,1);
-    //cout<<"INVALID";
+    //cout<<"INVALID";              //END OF 3rd INTERFACE
     menu();
-                      
+                               
     break;
        } cout<<"test";getch();
      }  
