@@ -30,7 +30,7 @@
 	       
       getch();
 
-      home();
+      home();cout<<"hello";getch();
 	
       }
 
@@ -39,7 +39,7 @@
  
      void home() {
 
-     char jump; 
+     int jump; 
     
      do {
 
@@ -87,25 +87,21 @@
 
     switch(jump) {
     
-    case '1':
-    menu();         
-    getch();                   //must for menu
+    case 1:
+    menu();                            //must for menu
     break;
 
-    case '2':
+    case 2:
     cout<<"collection";
     break;                            ///do while
 
-    case '0':
-    system("cls");
-    cout<<"EXIT";
-    break;
-
-    default:
+    /*default:
     gotoxy(32,1);
     cout<<"INVALID";
-    break;
+    break;*/
        }
+       if (jump!=0)
+        cout<<"loop";
      }while(jump!=0); 
    }
 
@@ -137,46 +133,47 @@
 
     
 
-    char jump;
+    int jump;
 
     cin>>jump;
 
     switch(jump)
    {
-    case '1':
+    case 1:
     //chinese();
     break;
 
-    case '2':
+    case 2:
     system("cls");
     cout<<"INDIAN";
     break;
 
-    case '3':
+    case 3:
     system("cls");
     cout<<"CONTINENTAL";
     break;
 
-    case '4':
+    case 4:
     system("cls");
     cout<<"BEVERAGES";
     break;
 
-    case '5':
+    case 5:
     system("cls");
     cout<<"SOUPS";
     break;
 
-    case '0':
+    case 0:
     home();
     break;
     	   
     default:
     gotoxy(32,1);
-    cout<<"INVALID";
-    home();                 //if default control goto home loop process 
+    //cout<<"INVALID";
+    menu();
+                     //if default control goto home loop process 
     break;
-       }
+       } cout<<"test";getch();
      }  
 
      
