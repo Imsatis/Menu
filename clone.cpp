@@ -8,18 +8,17 @@
 ////////////////////////
 
 
-  class test {
+  class HOME {
 
 
-
-  public:
+ public:
 
   	void welcome() {                           // 1st Interface
 
       system("cls");      
      
       gotoxy(32,15);                         
-                                                            
+                                              //must for home              
       cout<<"WELCOME...";
 
       gotoxy(0,15);                       
@@ -27,15 +26,20 @@
       cout<<"press any key to continue...";
 	       
       getch();
+
+      home();
 	
       }
 
       /******************* Home Function ********************/
 
  
-      void home()
-   { 
+     void home() {
+
+     char jump; 
     
+     do {
+
      system("cls");
 
      char d1=177,lf=10,si=15;
@@ -73,27 +77,20 @@
     gotoxy(29,3);
     cout<<"SELECT ANY OPTION  ";
 
-    home_switch();        // Calling Function Jump Throwing jump Value; 
-
-	}
 
 
-	    /******************** Home Switch Function ********************/
-
- void home_switch() {  
-    
-    char jump;
+     
     cin>>jump;
 
     switch(jump) {
     
     case '1':
-    menu();
+    menu();                            //must for menu
     break;
 
     case '2':
     cout<<"collection";
-    break;
+    break;                            ///do while
 
     case '0':
     system("cls");
@@ -103,12 +100,138 @@
     default:
     gotoxy(32,1);
     cout<<"INVALID";
-    home();                 /**if default control goto home loop process **/
+    break;
+       }
+     }while(jump!=0) 
+   }
+
+
+     void menu() {
+    
+    system("cls");
+
+    gotoxy(32,10);
+    cout<<"1.CHINESE";
+    
+    gotoxy(32,1);
+    cout<<"2.INDIAN";
+   
+    gotoxy(32,1);
+    cout<<"3.CONTINENTAL";
+
+    gotoxy(32,1);
+    cout<<"4.BEVERAGES";
+    
+    gotoxy(32,1);
+    cout<<"5.SOUPS";
+
+    gotoxy(32,1);
+    cout<<"0.MAIN MENU";
+
+    gotoxy(30,3);
+    cout<<"SELECT ANY OPTION  ";
+
+    
+
+    char jump;
+
+    cin>>jump;
+
+    switch(jump)
+   {
+    case '1':
+    chinese();
+    break;
+
+    case '2':
+    system("cls");
+    cout<<"INDIAN";
+    break;
+
+    case '3':
+    system("cls");
+    cout<<"CONTINENTAL";
+    break;
+
+    case '4':
+    system("cls");
+    cout<<"BEVERAGES";
+    break;
+
+    case '5':
+    system("cls");
+    cout<<"SOUPS";
+    break;
+
+    case '0':
+    home();
+    break;
+    	   
+    default:
+    gotoxy(32,1);
+    cout<<"INVALID";
+    home();                 //if default control goto home loop process 
     break;
        }
      }    
-
   };
 
+     
+    
+        class CHINESE {
 
- int menu() {}
+     /********************* Chinese Function ********************/
+ 
+      void chinese_disp()                    
+  { 
+       system("cls");
+
+       gotoxy(30,10); 
+       cout<<"1.Non-Vegetarian";
+       
+       gotoxy(30,1);
+       cout<<"2.Vegetarian";
+
+       gotoxy(30,1);
+       cout<<"0.BACK";   
+      
+       gotoxy(30,3);
+       cout<<"SELECT ANY OPTION  ";
+
+       
+     int jump;   
+    cin>>jump;
+    
+    switch(jump)
+  {
+    case 1:
+    system("cls");          
+    cout<<"Non-Veg";
+    break;
+
+    case 2:
+    system("cls");
+    cout<<"Veg";
+    break;
+
+    case 0:
+    menu();
+    break;
+
+    default:
+    gotoxy(35,2);
+    cout<<"INVALID";
+    getch();
+    chinese();
+    break;
+    
+     }  
+   }
+};
+
+
+     int main() {
+
+     	HOME test;
+     	test.welcome;
+     }
