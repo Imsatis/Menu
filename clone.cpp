@@ -4,6 +4,7 @@
 #include<conio.h>
 #include<stdlib.h>
 #include<gotoxy.h>
+#include<fstream>
 
 
 ////////////////////////
@@ -37,6 +38,23 @@
 
       public:
 
+//************reading from txt file*************************\\
+
+        string reading(ifstream &read_item) {
+
+            char ch;
+            string temp;                            
+
+             while((read_item.get(ch)&&ch!='\n')) {
+
+                  temp+=ch;
+                  }
+               return temp;   
+           }
+
+
+/******************Veg and Non-Veg display****************/
+
         int nonveg_disp() {
         int jump;
 
@@ -44,7 +62,7 @@
        system("cls");
 
        gotoxy(30,10); 
-       cout<<"1.Non-Vegetarian";
+       cout<<"1.Non-Vegetarian";               
        
        gotoxy(30,1);
        cout<<"2.Vegetarian";
@@ -63,29 +81,7 @@
     if (jump==2) {
       return 2;
     }
-    /**
-    switch(jump)
-  {
-    case 1:
-       system("cls");          
-       cout<<"Non-Veg";
-       return "Non-Veg";
-    break;
 
-    case 2:
-       system("cls");
-       cout<<"Veg";
-       return "Veg";
-    break;
-
-    default:
-    gotoxy(35,2);
-    cout<<"INVALID";
-    getch();
-    //chinese();
-    break;
-    
-      }**/
      }while(jump!=0); 
     }
   };   
@@ -101,6 +97,32 @@
         CHINESE() {
 
           cout<<"constructor";getch();
+
+
+      ifstream read_count;
+      read_count.open("chi.md");      //udd constructor for reading count value;
+      read_count>>count;
+
+      ifstream read_item;
+      read_item.open("chidata.md");      //udd constructor for reading items;    
+     
+
+      chi_non1=reading(read_item);
+      chi_non2=reading(read_item);
+      chi_non3=reading(read_item);
+      chi_non4=reading(read_item);
+      chi_non5=reading(read_item);
+      chi_non6=reading(read_item);
+      chi_non7=reading(read_item);
+      chi_non8=reading(read_item);
+      chi_non9=reading(read_item);
+      chi_non10=reading(read_item);
+      chi_non11=reading(read_item);
+      chi_non12=reading(read_item);
+      chi_non13=reading(read_item);
+      chi_non14=reading(read_item);
+      chi_non15=reading(read_item);  
+        
         }
 
         int value;
@@ -108,7 +130,7 @@
       void chinese_disp() {
 
         value=nonveg_disp();
-        cout<<value;getch();
+        //cout<<value;getch();
          
         if (value==1){
 
@@ -123,10 +145,25 @@
 
       void chi_non_show() {
 
-         int no=1;       
+
+      system("cls");
+      
+      gotoxy(32,3);
+      cout<<"Non-Vegetarian";
+
+      gotoxy(6,3);
+      cout<<"Items";
+      gotoxy(25,0);
+      cout<<"Half";
+      gotoxy(12,0);
+      cout<<"Full";
+         
+         int no=1;
+
+        //gotoxy(32,3);       
  
       if(no<count)  
-        cout<<no<<" "<<chi_non1<<"\n";  no++;
+        cout<<"\n\n\n"<<no<<" "<<chi_non1<<"\n";  no++;
         
       if(no<count)
         cout<<no<<" "<<chi_non2<<"\n";  no++;
@@ -169,6 +206,15 @@
         
       if(no<count)
         cout<<no<<" "<<chi_non15<<"\n";  no++;
+           
+
+      gotoxy(2,1);
+      cout<<"Selected Items";
+      gotoxy(19,0);
+      cout<<"Amount"; 
+      gotoxy(15,0);
+      cout<<"";    
+
 
                       }
 
@@ -292,7 +338,8 @@ class MENU :public CHINESE {
                                           //END OF 3rd INTERFACE
        } if (jump==0){cout<<"break";getch();}
       
-        else {cout<<"loop menu";getch();}
+        //else {cout<<"loop menu";
+       getch();
       }while(jump!=0);
     }  
   };
