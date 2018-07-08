@@ -11,6 +11,14 @@ class my {
    int a,b;
 
 
+
+
+   ~my() {
+   
+    cout<<"\n\nDestructor "<<a<<b;
+   
+   }
+
    my() {
     cout<<"this is satis";
     
@@ -31,6 +39,8 @@ class my {
 
    int main() {
      my ob;
+     ob.a=11;
+     ob.b=12;
    
      my obj(10,20);
      //cout<<obj.a<<obj.b;
