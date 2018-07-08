@@ -109,6 +109,10 @@
 
 
      void menu() {
+
+     int jump;
+
+      do {
     
     system("cls");
 
@@ -135,14 +139,14 @@
 
     
 
-    int jump;
+    
 
     cin>>jump;
 
     switch(jump)
    {
     case 1:
-    //chinese();
+    CHINESE::chinese_disp();
     break;
 
     case 2:
@@ -164,21 +168,10 @@
     system("cls");
     cout<<"SOUPS";
     break;
-
-    case 0:
-    home();
-    break;
-    	   
-    default:
-    gotoxy(32,1);
-    //cout<<"INVALID";              //END OF 3rd INTERFACE
-    menu();
-                               
-    break;
+                                          //END OF 3rd INTERFACE
        } cout<<"test";getch();
-     }  
-
-     
+      }while(jump!=0);
+    }  
   };
 
      
@@ -237,6 +230,6 @@
 
      int main() {
 
-     	HOME test;
+     	CHINESE test;
      	test.welcome();
      }
