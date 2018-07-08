@@ -7,11 +7,22 @@
 
 ////////////////////////
 
+  //using namespace std;
+
+  class testing {
+
+  	void print() {
+  		cout<<"testing";
+  	}
+  	cin>>a;
+  };
+
 
   class HOME {
 
 
  public:
+
 
   	void welcome() {                           // 1st Interface
 
@@ -85,7 +96,8 @@
     switch(jump) {
     
     case '1':
-    menu();                            //must for menu
+    menu();         
+    getch();                   //must for menu
     break;
 
     case '2':
@@ -102,7 +114,7 @@
     cout<<"INVALID";
     break;
        }
-     }while(jump!=0) 
+     }while(jump!=0); 
    }
 
 
@@ -140,7 +152,7 @@
     switch(jump)
    {
     case '1':
-    chinese();
+    //chinese();
     break;
 
     case '2':
@@ -173,12 +185,14 @@
     home();                 //if default control goto home loop process 
     break;
        }
-     }    
+     }  
+
+     
   };
 
      
     
-        class CHINESE {
+        class CHINESE :public HOME  {
 
      /********************* Chinese Function ********************/
  
@@ -222,7 +236,7 @@
     gotoxy(35,2);
     cout<<"INVALID";
     getch();
-    chinese();
+    //chinese();
     break;
     
      }  
@@ -233,5 +247,5 @@
      int main() {
 
      	HOME test;
-     	test.welcome;
+     	test.welcome();
      }
