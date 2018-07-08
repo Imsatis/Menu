@@ -15,9 +15,21 @@
      
 
 
-      class DATA {
+      class DATA {  
 
+       //string   1,2,3,4,5,6,7,8,9,10,11,12,13,14,15;
 
+    protected:
+
+        string   chi_non1,chi_non2,chi_non3,chi_non4,chi_non5,chi_non6,chi_non7,chi_non8,chi_non9,chi_non10,chi_non11,chi_non12,chi_non13,chi_non14,chi_non15;
+
+        string   chi_veg1,chi_veg2,chi_veg3,chi_veg4,chi_veg5,chi_veg6,chi_veg7,chi_veg8,chi_veg9,chi_veg10,chi_veg11,chi_veg12,chi_veg13,chi_veg14,chi_veg15;
+      
+        string   in_non1,in_non2,in_non3,in_non4,in_non5,in_non6,in_non7,in_non8,in_non9,in_non10,in_non11,in_non12,in_non13,in_non14,in_non15;
+
+        string   in_veg1,in_veg2,in_veg3,in_veg4,in_veg5,in_veg6,in_veg7,in_veg8,in_veg9,in_veg10,in_veg11,in_veg12,in_veg13,in_veg14,in_veg15;
+         
+        int count; 
 
       }; 
 
@@ -80,7 +92,7 @@
 
 
 
-        class CHINESE :public COMMON{
+        class CHINESE :protected DATA , public COMMON   {
 
      /********************* Chinese Function ********************/
  
@@ -88,12 +100,124 @@
 
         int value;
 
-           void chinese_disp() {
+      void chinese_disp() {
 
         value=nonveg_disp();
         cout<<value;getch();
+         
+        if (value==1){
 
-      }
+           chi_non_show();
+        }
+        if (value==2) {
+          
+           chi_veg_show();
+        }
+
+           }
+
+      void chi_non_show() {
+
+         int no=1;       
+ 
+      if(no<count)  
+        cout<<no<<" "<<chi_non1<<"\n";  no++;
+        
+      if(no<count)
+        cout<<no<<" "<<chi_non2<<"\n";  no++;
+        
+      if(no<count)
+        cout<<no<<" "<<chi_non3<<"\n";  no++;
+      
+      if(no<count)
+        cout<<no<<" "<<chi_non4<<"\n";  no++;
+      
+      if(no<count)
+        cout<<no<<" "<<chi_non5<<"\n";  no++;
+      
+      if(no<count)
+        cout<<no<<" "<<chi_non6<<"\n";  no++;
+        
+      if(no<count)
+        cout<<no<<" "<<chi_non7<<"\n";  no++;
+        
+      if(no<count) 
+        cout<<no<<" "<<chi_non8<<"\n";  no++;
+        
+      if(no<count)  
+        cout<<no<<" "<<chi_non9<<"\n";  no++;
+        
+      if(no<count)  
+        cout<<no<<" "<<chi_non10<<"\n";  no++;
+        
+      if(no<count) 
+        cout<<no<<" "<<chi_non11<<"\n";  no++;
+        
+      if(no<count)
+        cout<<no<<" "<<chi_non12<<"\n";  no++;
+        
+      if(no<count)
+        cout<<no<<" "<<chi_non13<<"\n";  no++;
+        
+      if(no<count)
+        cout<<no<<" "<<chi_non14<<"\n";  no++;
+        
+      if(no<count)
+        cout<<no<<" "<<chi_non15<<"\n";  no++;
+
+                      }
+
+      void chi_veg_show() {
+
+        int no=1;       
+ 
+      if(no<count)
+        cout<<no<<" "<<chi_veg1<<"\n";  no++;
+
+      if(no<count)
+        cout<<no<<" "<<chi_veg2<<"\n";  no++;
+
+      if(no<count)
+        cout<<no<<" "<<chi_veg3<<"\n";  no++;
+
+      if(no<count)
+        cout<<no<<" "<<chi_veg4<<"\n";  no++;
+
+      if(no<count)
+        cout<<no<<" "<<chi_veg5<<"\n";  no++;
+
+      if(no<count)
+        cout<<no<<" "<<chi_veg6<<"\n";  no++;
+
+      if(no<count)
+        cout<<no<<" "<<chi_veg7<<"\n";  no++;
+
+      if(no<count)
+        cout<<no<<" "<<chi_veg8<<"\n";  no++;
+
+      if(no<count)
+        cout<<no<<" "<<chi_veg9<<"\n";  no++;
+
+      if(no<count)
+        cout<<no<<" "<<chi_veg10<<"\n";  no++;
+
+      if(no<count)
+        cout<<no<<" "<<chi_veg11<<"\n";  no++;
+
+      if(no<count)
+        cout<<no<<" "<<chi_veg12<<"\n";  no++;
+
+      if(no<count)
+        cout<<no<<" "<<chi_veg13<<"\n";  no++;
+
+      if(no<count)
+        cout<<no<<" "<<chi_veg14<<"\n";  no++;
+
+      if(no<count)
+        cout<<no<<" "<<chi_veg15<<"\n";  no++;
+
+
+        }
 };
 
 class MENU :public CHINESE {
@@ -273,4 +397,5 @@ class HOME :public MENU {
 
      	HOME test;
      	test.welcome();
+      return 0;
      }
