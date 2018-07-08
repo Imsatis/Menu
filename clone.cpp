@@ -98,6 +98,11 @@
  
       public:
 
+        CHINESE() {
+
+          cout<<"constructor";getch();
+        }
+
         int value;
 
       void chinese_disp() {
