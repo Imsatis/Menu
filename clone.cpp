@@ -130,16 +130,15 @@
       read_item.open("chidata.md");      //udd constructor for reading items;    
    
       
-      //string *chi_non[16]={&chi_non1,&chi_non2,&chi_non3,&chi_non4,&chi_non5,&chi_non6,&chi_non7,&chi_non8,&chi_non9,&chi_non10,&chi_non11,&chi_non12,&chi_non13,&chi_non14,&chi_non15};
+      string *chi_non[16]={&chi_non1,&chi_non2,&chi_non3,&chi_non4,&chi_non5,&chi_non6,&chi_non7,&chi_non8,&chi_non9,&chi_non10,&chi_non11,&chi_non12,&chi_non13,&chi_non14,&chi_non15};
        
       string ary[15];
 
       for (int i=0;i<=15;i++) {
 
         
-        //ary[i]=reading(read_item);
+        ary[i]=reading(read_item);
       
-        cin>>ary[i];
       }
        
    /**  
@@ -493,7 +492,10 @@ class HOME :public MENU {
 
     for(int i=0;i<=15;i++) {
       
-        cout<<*chi_non[i]<<"\n";
+        //cout<<*chi_non[i]<<"\n";
+        
+        cout<<ary[0];
+
        }
       } 
 
