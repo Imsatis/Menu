@@ -5,7 +5,7 @@
 #include<stdlib.h>
 #include<gotoxy.h>
 #include<fstream>
-
+#include<string.h>
 
 ////////////////////////
 
@@ -22,6 +22,16 @@
 
     protected:
 
+        DATA(){
+
+          const int size=15;
+
+        }
+
+        string *chi_non[];//={&chi_non1,&chi_non2,&chi_non3,&chi_non4,&chi_non5,&chi_non6,&chi_non7,&chi_non8,&chi_non9,&chi_non10,&chi_non11,&chi_non12,&chi_non13,&chi_non14,&chi_non15};
+
+        int aa;
+
         string   chi_non1,chi_non2,chi_non3,chi_non4,chi_non5,chi_non6,chi_non7,chi_non8,chi_non9,chi_non10,chi_non11,chi_non12,chi_non13,chi_non14,chi_non15;
 
         string   chi_veg1,chi_veg2,chi_veg3,chi_veg4,chi_veg5,chi_veg6,chi_veg7,chi_veg8,chi_veg9,chi_veg10,chi_veg11,chi_veg12,chi_veg13,chi_veg14,chi_veg15;
@@ -37,6 +47,7 @@
       class COMMON {
 
       public:
+
 
 //************reading from txt file*************************\\
 
@@ -93,6 +104,15 @@
      /********************* Chinese Function ********************/
  
       public:
+
+
+       void  arr() {
+
+         aa=10;
+
+        //chi_non[0]=&chi_non1;
+       
+      }
 
         CHINESE() {
 
@@ -445,9 +465,29 @@ class HOME :public MENU {
  };
 
 
+   class show :protected DATA {
+
+    public:
+    void add() {
+    cout<<"\n"<<&chi_non1<<"\n"<<&chi_non2<<"\n"<<&chi_non3<<"\n"<<&chi_non4<<"\n"<<&chi_non5<<"\n"<<&chi_non6<<"\n"<<&chi_non7<<"\n"<<&chi_non8<<"\n"<<&chi_non9<<"\n"<<&chi_non10<<"\n"<<&chi_non11<<"\n"<<&chi_non12<<"\n"<<&chi_non13<<"\n"<<&chi_non14<<"\n"<<&chi_non15;
+    
+    string *chi_non[]={&chi_non1,&chi_non2,&chi_non3,&chi_non4,&chi_non5,&chi_non6,&chi_non7,&chi_non8,&chi_non9,&chi_non10,&chi_non11,&chi_non12,&chi_non13,&chi_non14,&chi_non15};
+
+    for(int i=0;i<=15;i++) {
+      
+        cout<<*chi_non[i]<<"\n";
+       }
+      } 
+
+ };
+
      int main() {
 
      	HOME test;
      	test.welcome();
+
+      show tem;
+      tem.add();
+
       return 0;
      }
