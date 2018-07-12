@@ -296,6 +296,14 @@
            b=(int)slc[1];
            c=(int)slc[3];
 
+        if (a==49) {
+
+            a=0;
+            b=0;  
+          } 
+
+          
+
 
       cout<<chi_non[a]<<"              "<<len[b];
 
