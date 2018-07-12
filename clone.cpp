@@ -291,14 +291,17 @@
 
           int l=0;
 
-          while(cin.get())  {
+          while(ch=getch()!=13)  {
+
+            cout<<(char)ch;
 
           //cin.get(slc[l]);
 
             slc[l]=ch;
             l++;
 
-            
+            //if(ch==13)
+              //break;
         }
      
            a=(int)slc[0];
