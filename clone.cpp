@@ -292,8 +292,11 @@
           cin>>slc[l];
         }
      
-        
-                
+           a=(int)slc[0];
+           b=(int)slc[1];
+           c=(int)slc[3];
+
+
       cout<<chi_non[a]<<"              "<<len[b];
 
       //cout<<slc<<" 100";    
