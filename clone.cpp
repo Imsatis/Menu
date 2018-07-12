@@ -34,6 +34,7 @@
         //string ary[];
 
         //nt aa;
+        string chi_non[15]; int len[15];
 
         string   chi_non1,chi_non2,chi_non3,chi_non4,chi_non5,chi_non6,chi_non7,chi_non8,chi_non9,chi_non10,chi_non11,chi_non12,chi_non13,chi_non14,chi_non15;
 
@@ -47,14 +48,14 @@
 
       }; 
 
-      class COMMON {
+      class COMMON  {
 
       public:
 
 
 //************reading from txt file*************************\\
 
-        string reading(ifstream &read_item) {
+        string reading(ifstream &read_item,int &l) {
 
             char ch;
             string temp;                            
@@ -62,9 +63,18 @@
              while((read_item.get(ch)&&ch!='\n')) {
 
                   temp+=ch;
+                  l++;
                   }
                return temp;   
            }
+
+           void space(int sp) {
+
+            while(sp) {
+              cout<<" ";
+              sp--;
+             }
+          }
 
 
 /******************Veg and Non-Veg display****************/
@@ -111,7 +121,7 @@
 
        void  arr() {
 
-         aa=10;
+         //a=10;
 
         //chi_non[0]=&chi_non1;
        
@@ -134,13 +144,17 @@
        
       //string ary[15];
 
-      //for (int i=0;i<=15;i++) {
+      for (int i=0;i<15;i++) {
 
-                                          //testing for reading files;        
-        //ary[i]=reading(read_item);
+          int l=0;                               //testing for reading files;        
+          chi_non[i]=reading(read_item,l);
+          len[i]=35-l;
       
-      //}
+      }
        
+      
+
+
    /**  
 
       chi_non1=reading(read_item);
@@ -193,12 +207,31 @@
       gotoxy(25,0);
       cout<<"Half";
       gotoxy(12,0);
-      cout<<"Full";
+      cout<<"Full\n";
          
          int no=1;
+          
 
         //gotoxy(32,3);       
- 
+
+      for (int i=0;i<15;i++) {
+
+           //35 space;                               //testing for reading files;        
+
+            cout<<"* "<<chi_non[i];
+
+            space(len[i]);
+             
+            cout<<len[i];
+
+            space(14);
+            cout<<len[i]<<"\n";
+          }
+
+
+
+
+ /***
       if(no<count)  
         cout<<"\n\n\n"<<no<<" "<<chi_non1<<"\n";  no++;
         
@@ -243,14 +276,20 @@
         
       if(no<count)
         cout<<no<<" "<<chi_non15<<"\n";  no++;
-           
+     **/     
 
       gotoxy(2,1);
       cout<<"Selected Items";
       gotoxy(19,0);
       cout<<"Amount"; 
       gotoxy(15,0);
-      cout<<"";    
+      cout<<"";
+      
+           
+          
+      cout<<chi_non[a]<<"              "<<len[b];
+
+      //cout<<slc<<" 100";    
 
 
                       }
