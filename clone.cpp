@@ -285,19 +285,23 @@
       gotoxy(15,0);
       cout<<"";
       
-      char slc[3],ch;
-      int a,b,c;
+      char slc[5],che;
+      int a,b,c,d;
        //for (int l=0;l<3;l++) 
 
           int l=0;
 
-          while(ch=getch()!=13)  {
+          while(che=getch())  {
 
-            cout<<(char)ch;
+            cout<<che;
 
-          //cin.get(slc[l]);
+          //cin.get(slc[l]);         //errorr getch();
+            if(che==13){
+              cout<<"\n";             
+              break;
+            }
 
-            slc[l]=ch;
+            slc[l]=che;
             l++;
 
             //if(ch==13)
@@ -308,19 +312,22 @@
            b=(int)slc[1];
            c=(int)slc[3];
 
-        if (a==49) {
+        if (a>48&&a<58) {
+
+            if(a==49) {
 
             a=0;
             b=0;  
-          } 
-
-       if(a>49&&b==104) {
+            }
+        else {
+        if(a>49&&b==104) {
 
             a-=49;
             b=a+2;
-            
-
-          }  
+            }    
+          } 
+         }
+         
 
 
       cout<<chi_non[a]<<"              "<<len[b];
