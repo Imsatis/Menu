@@ -285,11 +285,20 @@
       gotoxy(15,0);
       cout<<"";
       
-      char slc[3];
+      char slc[3],ch;
       int a,b,c;
-       for (int l=0;l<3;l++) {
+       //for (int l=0;l<3;l++) 
 
-          cin>>slc[l];
+          int l=0;
+
+          while(cin.get())  {
+
+          //cin.get(slc[l]);
+
+            slc[l]=ch;
+            l++;
+
+            
         }
      
            a=(int)slc[0];
