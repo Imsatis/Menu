@@ -285,8 +285,15 @@
       gotoxy(15,0);
       cout<<"";
       
-           
-          
+      char slc[3];
+      int a,b,c;
+       for (int l=0;l<3;l++) {
+
+          cin>>slc[l];
+        }
+     
+        
+                
       cout<<chi_non[a]<<"              "<<len[b];
 
       //cout<<slc<<" 100";    
