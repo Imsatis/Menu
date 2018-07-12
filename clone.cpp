@@ -293,7 +293,7 @@
 
           while(che=getch())  {
 
-            cout<<che;
+            cout<<(int)che;
 
           //cin.get(slc[l]);         //errorr getch();
             if(che==13){
@@ -312,25 +312,34 @@
            b=(int)slc[1];
            c=(int)slc[3];
 
-        if (a>48&&a<58) {
+        if ((a>48&&a<58)) {
 
-            if(a==49) {
+            //if(a==49) {
 
-            a=0;
-            b=0;  
+            //a=0;
+            //b=0;  
+            //}
+
+            if (c==104||c==102) {
+
+              cout<<"hellow";
+              a=(a-49)+9;
+              //b=(10-a)+2;
             }
-        else {
-        if(a>49&&b==104) {
+      
+            else {
 
             a-=49;
-            b=a+2;
-            }    
-          } 
-         }
+            //}
+           }
+          }  
+        
          
+         if(b==104||c==104) 
+         cout<<chi_non[a]<<"              "<<len[a];
 
-
-      cout<<chi_non[a]<<"              "<<len[b];
+         if(b==102||c==102)
+         cout<<chi_non[a]<<"              "<<len[a];
 
       //cout<<slc<<" 100";    
 
