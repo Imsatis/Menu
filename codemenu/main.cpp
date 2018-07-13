@@ -287,11 +287,16 @@
       cout<<"Selected Items";
       gotoxy(19,0);
       cout<<"Amount";
+
+      char slc[6],che;
+      int a,b,c;
+      bool o=true;
+
+      do {
       gotoxy(15,0);
       cout<<"";
 
-      char slc[6],che;
-      int a,b,c,d;
+
        //for (int l=0;l<3;l++)
 
           int l=0;
@@ -304,10 +309,11 @@
 
           //cin.get(slc[l]);         //errorr getch();
             if(che==13){
-              cout<<"\n";
-              condition=false;
-            }
 
+              //cout<<"\n";
+              che='1';
+              condition=false;
+               }
             slc[l]=che;
             l++;
 
@@ -315,18 +321,20 @@
               //break;
         }
 
-           a=(int)slc[0];cout<<"a "<<a;
-           b=(int)slc[1];cout<<"\nb "<<b;
-           c=(int)slc[2];cout<<"\nc "<<c;
-           d=(int)slc[3];cout<<"\nd "<<d;
+           a=(int)slc[0];//cout<<"a "<<a;
+           b=(int)slc[1];//cout<<"\nb "<<b;
+           c=(int)slc[2];//cout<<"\nc "<<c;
+           //d=(int)slc[3];//cout<<"\nd "<<d;
 
-        if ((a>48&&a<58)) { cout<<"hellow";
+        if (((a>48&&a<58)&&(b==104||b==102)&&(c>48&&c<58))||((a>48&&a<58)&&(b>48&&b<58)&&(c==104||c==102))) {
 
             //if(a==49) {
 
             //a=0;
             //b=0;
             //}
+
+            o=false;
 
             if (c==104||c==102) {
 
@@ -341,15 +349,14 @@
             //}
            }
           }
-
-      else {
-         if(b==104||c==104)
-         cout<<chi_non[a]<<"              "<<len[a];
-
-         if(b==102||c==102)
-         cout<<chi_non[a]<<"              "<<len[a];
-       }
+      }while(o);
       //cout<<slc<<" 100";
+
+         if (b==104||c==104)
+         cout<<"\n"<<chi_non[a]<<"              "<<len[a];
+
+         if (b==102||c==102)
+         cout<<"\n"<<chi_non[a]<<"              "<<len[a];
 
 
                       }
