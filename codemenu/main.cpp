@@ -106,7 +106,7 @@
       return 2;
     }
     else
-    return 0;
+    return jump;
 
      }while(jump!=0);
 
@@ -517,7 +517,7 @@ class HOME :public MENU {
 
      system("cls");
 
-     char d1=177,lf=10,si=15;
+    char d1=177,lf=10,si=15;
      int i;
 
      cout<<lf;
