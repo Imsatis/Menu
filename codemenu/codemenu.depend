@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1531445869 source:c:\users\satis\desktop\imsatis\menu\codemenu\main.cpp
+	<iostream>
+	<conio.h>
+	<stdlib.h>
+	"gotoxy.h"
+	<fstream>
+	<string.h>
+
+1529687655 c:\users\satis\desktop\imsatis\menu\codemenu\gotoxy.h
+	<iostream>
+
