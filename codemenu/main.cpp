@@ -294,7 +294,7 @@
 
       do {
       gotoxy(15,0);
-      cout<<"";
+      cout<<"  \n";
 
 
        //for (int l=0;l<3;l++)
@@ -304,7 +304,8 @@
 
           while(condition)  {
 
-            che=getch();
+            cin>>che;
+            //che=getch();
             cout<<che;
 
           //cin.get(slc[l]);         //errorr getch();
@@ -326,7 +327,7 @@
            c=(int)slc[2];//cout<<"\nc "<<c;
            //d=(int)slc[3];//cout<<"\nd "<<d;
 
-        if (((a>48&&a<58)&&(b==104||b==102)&&(c>48&&c<58))||((a>48&&a<58)&&(b>48&&b<58)&&(c==104||c==102))) {
+        if (((a>48&&a<58)&&(b==104||b==102)&&(c>48&&c<58))||((a>48&&a<58)&&(b>47&&b<58)&&(c==104||c==102))) {
 
             //if(a==49) {
 
@@ -339,7 +340,7 @@
             if (c==104||c==102) {
 
               cout<<"hellow";
-              a=(a-49)+9;
+              a=(b-48)+9;
               //b=(10-a)+2;
             }
 
@@ -457,7 +458,7 @@ class MENU :public CHINESE {
    {
     case 1:
     chinese_disp();
-    break;
+        break;
 
     case 2:
     system("cls");
@@ -482,7 +483,7 @@ class MENU :public CHINESE {
        } if (jump==0){cout<<"break";getch();}
 
         //else {cout<<"loop menu";
-       getch();
+        getch();
       }while(jump!=0);
     }
   };
