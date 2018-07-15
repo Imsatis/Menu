@@ -304,8 +304,8 @@
 
           while(condition)  {
 
-            cin>>che;
-            //che=getch();
+            //cin>>che;
+            che=getch();
             cout<<che;
 
           //cin.get(slc[l]);         //errorr getch();
