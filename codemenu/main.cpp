@@ -293,7 +293,14 @@
       bool o=true;
 
       do {
-      gotoxy(15,0);
+
+      //gotoxy(15,0);
+
+      if (b==104||c==104)
+         cout<<"\n"<<chi_non[a]<<"              "<<len[a];
+
+         if (b==102||c==102)
+         cout<<"\n"<<chi_non[a]<<"              "<<len[a];
       cout<<"  \n";
 
 
@@ -318,6 +325,14 @@
             slc[l]=che;
             l++;
 
+            if (b==104||c==104)
+            cout<<"\n"<<chi_non[a]<<"              "<<len[a];
+
+         if (b==102||c==102)
+         cout<<"\n"<<chi_non[a]<<"              "<<len[a];
+         cout<<"  \n";
+
+
             //if(ch==13)
               //break;
         }
@@ -328,12 +343,6 @@
            //d=(int)slc[3];//cout<<"\nd "<<d;
 
         if (((a>48&&a<58)&&(b==104||b==102)&&(c>48&&c<58))||((a>48&&a<58)&&(b>47&&b<58)&&(c==104||c==102))) {
-
-            //if(a==49) {
-
-            //a=0;
-            //b=0;
-            //}
 
             o=false;
 
@@ -352,12 +361,6 @@
           }
       }while(o);
       //cout<<slc<<" 100";
-
-         if (b==104||c==104)
-         cout<<"\n"<<chi_non[a]<<"              "<<len[a];
-
-         if (b==102||c==102)
-         cout<<"\n"<<chi_non[a]<<"              "<<len[a];
 
 
                       }
