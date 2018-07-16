@@ -289,6 +289,7 @@
       cout<<"Amount";
 
       bool o=true;
+      int key;
 
       do {
 
@@ -296,10 +297,10 @@
           int a,b,c;
 
          if (b==104||c==104)
-         cout<<"\n"<<chi_non[a]<<"              "<<len[a];
+         cout<<"\n"<<chi_non[key]<<"              "<<len[key];
 
          if (b==102||c==102)
-         cout<<"\n"<<chi_non[a]<<"              "<<len[a];
+         cout<<"\n"<<chi_non[key]<<"              "<<len[key];
          cout<<"  \n";
 
 
@@ -313,7 +314,7 @@
           while(condition)  {
 
             //cin>>che;
-            che=getch();
+                che=getch();
             cout<<che;
 
           //cin.get(slc[l]);         //errorr getch();
@@ -323,7 +324,7 @@
               che='1';
               condition=false;
                }
-            if (che==48) {
+            if (che==27) {
                 o=false;
             }
             slc[l]=che;
@@ -345,13 +346,13 @@
             if (c==104||c==102) {
 
               cout<<"hellow";
-              a=(b-48)+9;
+              key=(b-48)+9;
               //b=(10-a)+2;
             }
 
             else {
 
-            a-=49;
+            key=a-49;
             //}
            }
           }
