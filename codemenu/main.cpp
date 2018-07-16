@@ -288,23 +288,24 @@
       gotoxy(19,0);
       cout<<"Amount";
 
-      char slc[6],che;
-      int a,b,c;
       bool o=true;
 
       do {
 
-      //gotoxy(15,0);
+          char slc[6],che;
+          int a,b,c;
 
-      if (b==104||c==104)
+         if (b==104||c==104)
          cout<<"\n"<<chi_non[a]<<"              "<<len[a];
 
          if (b==102||c==102)
          cout<<"\n"<<chi_non[a]<<"              "<<len[a];
-      cout<<"  \n";
+         cout<<"  \n";
 
 
        //for (int l=0;l<3;l++)
+
+
 
           int l=0;
           bool condition=true;
@@ -322,15 +323,11 @@
               che='1';
               condition=false;
                }
+            if (che==48) {
+                o=false;
+            }
             slc[l]=che;
             l++;
-
-            if (b==104||c==104)
-            cout<<"\n"<<chi_non[a]<<"              "<<len[a];
-
-         if (b==102||c==102)
-         cout<<"\n"<<chi_non[a]<<"              "<<len[a];
-         cout<<"  \n";
 
 
             //if(ch==13)
@@ -344,7 +341,6 @@
 
         if (((a>48&&a<58)&&(b==104||b==102)&&(c>48&&c<58))||((a>48&&a<58)&&(b>47&&b<58)&&(c==104||c==102))) {
 
-            o=false;
 
             if (c==104||c==102) {
 
