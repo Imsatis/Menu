@@ -299,10 +299,10 @@
          if (shw) {
 
          if (b==104||c==104)
-         cout<<"\n"<<chi_non[key]<<"              "<<len[key];
+         cout<<chi_non[key]<<"              "<<len[key];
 
          if (b==102||c==102)
-         cout<<"\n"<<chi_non[key]<<"              "<<len[key];
+         cout<<chi_non[key]<<"              "<<len[key];
          cout<<"  \n";
          }
 
@@ -314,6 +314,9 @@
           bool condition=true;
 
           while(condition)  {
+
+                int test;
+                test*=test++;
 
             //cin>>che;
                 che=getch();
@@ -348,7 +351,7 @@
 
             if (c==104||c==102) {
 
-              cout<<"hellow";
+              //cout<<"hellow";
               key=(b-48)+9;
               //b=(10-a)+2;
             }
