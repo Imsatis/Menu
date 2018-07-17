@@ -19,9 +19,10 @@ using namespace std;
     var(int x,int y){
        a=x;b=y; }
 
-     int add() {
-
-     return a+b;
+     void add() {
+      int r;
+     //return
+      r=a+b;
    }
 
  };
@@ -29,8 +30,8 @@ using namespace std;
 int main()
 {
     var obj;
-    int r=obj.add();
-    cout<<r;
+    obj.add();
+    cout<<obj.r;
 
     return 0;
 }
