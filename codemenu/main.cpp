@@ -72,21 +72,17 @@
              }
            }
 
-     void select(){
+     int select(bool &o){
 
-      gotoxy(2,1);
-      cout<<"Selected Items";
-      gotoxy(19,0);
-      cout<<"Amount\n";
+      //bool o=true;
+      int ky;
+      bool shw; char test=13;
 
-      bool o=true;
-      int key;
-
-      do {
+      //do {
 
           char slc[6]={0,0,0,0,0,0},che;
           int a=0,b=0,c=0;
-          bool shw;
+
 
 
        //for (int l=0;l<3;l++)
@@ -100,6 +96,7 @@
 
             //cin>>che;
             che=getch();
+            //if((che>47&&che<58)||(che>64&&che<91||che>96&&che<123))
             cout<<che;
 
           //cin.get(slc[l]);         //errorr getch();
@@ -129,25 +126,29 @@
 
               shw=true;
 
-              if (c==104||c==102) key=(b-48)+9;
-              //b=(10-a)+2;
+              if (c==104||c==102) {
+                ky=(b-48)+9;
+               }
 
-              else key=a-49;
-
+              else {
+               ky=a-49;
+              }
             }
 
-        else cout<<"INVALID ";
+        else cout<<"                       "<<test<<"INVALID ";
 
-           if (shw) {
-          if (b==104||c==104)
-          cout<<chi_non[key]<<"              "<<len[key];
+          if (shw) {
+            if (b==104||c==104) return ky;
+          //cout<<chi_non[key]<<"              "<<len[key];
 
 
-          if (b==102||c==102)
-          cout<<chi_non[key]<<"              "<<len[key];
-          cout<<"  \n";
-         }
-      }while(o);
+           if (b==102||c==102) return ky;
+          //cout<<chi_non[key]<<"              "<<len[key];
+          //cout<<"  \n";
+          }
+
+        return 1000;
+      //}while(o);
       //cout<<slc<<" 100";
     }
 
@@ -358,9 +359,20 @@
         cout<<no<<" "<<chi_non15<<"\n";  no++;
      **/
 
-      select();
+      gotoxy(2,1);
+      cout<<"Selected Items";
+      gotoxy(19,0);
+      cout<<"Amount\n";
 
 
+      bool oo=true;
+  do {
+      int key=select(oo);
+
+      if(key!=1000)
+      cout<<chi_non[key]<<"              "<<len[key]<<"  \n";
+
+     }while(oo);
                       }
 
       void chi_veg_show() {
