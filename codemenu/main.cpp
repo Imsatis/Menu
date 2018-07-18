@@ -311,7 +311,7 @@
 
 
           int l=0;
-          bool condition=true;
+            bool condition=true;
 
           while(condition)  {
 
@@ -345,7 +345,7 @@
            c=(int)slc[2];//cout<<"\nc "<<c;
            //d=(int)slc[3];//cout<<"\nd "<<d;
 
-        if (((a>48&&a<58)&&(b==104||b==102)&&(c>48&&c<58))||((a>48&&a<58)&&(b>47&&b<58)&&(c==104||c==102))) {
+        if (((a>48&&a<58)&&(b==104||b==102)&&(c>48&&c<58))||((a>48&&a<50)&&(b>47&&b<54)&&(c==104||c==102))) {
 
              shw=true;
 
