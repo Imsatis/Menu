@@ -86,7 +86,7 @@
 
           char slc[6]={0,0,0,0,0,0},che;
           int a=0,b=0,c=0;
-
+          bool shw;
 
 
        //for (int l=0;l<3;l++)
@@ -107,7 +107,7 @@
 
               //cout<<"\n";
               che='1';
-              condition=false;
+              condition=false;shw=false;
                }
 
             if (che==27) o=false;
@@ -127,6 +127,8 @@
 
         if (((a>48&&a<58)&&(b==104||b==102)&&(c>48&&c<58))||((a>48&&a<50)&&(b>47&&b<54)&&(c==104||c==102))) {
 
+              shw=true;
+
               if (c==104||c==102) key=(b-48)+9;
               //b=(10-a)+2;
 
@@ -136,7 +138,7 @@
 
         else cout<<"INVALID ";
 
-         //if (shw) {
+           if (shw) {
           if (b==104||c==104)
           cout<<chi_non[key]<<"              "<<len[key];
 
@@ -144,9 +146,7 @@
           if (b==102||c==102)
           cout<<chi_non[key]<<"              "<<len[key];
           cout<<"  \n";
-
-
-         //}
+         }
       }while(o);
       //cout<<slc<<" 100";
     }
