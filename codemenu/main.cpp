@@ -17,13 +17,13 @@
 
 
 
-      class DATA {
+      class COMMON_DATA {
 
        //string   1,2,3,4,5,6,7,8,9,10,11,12,13,14,15;
 
     protected:
 
-        DATA(){
+        COMMON_DATA(){
 
           //const int size=15;
 
@@ -45,10 +45,6 @@
         string   in_veg1,in_veg2,in_veg3,in_veg4,in_veg5,in_veg6,in_veg7,in_veg8,in_veg9,in_veg10,in_veg11,in_veg12,in_veg13,in_veg14,in_veg15;
 
         int count;
-
-      };
-
-      class COMMON  {
 
       public:
 
@@ -91,13 +87,6 @@
           char slc[6]={0,0,0,0,0,0},che;
           int a=0,b=0,c=0;
 
-          if (b==104||c==104)
-         //cout<<chi_non[key]<<"              "<<len[key];
-         cout<<key;
-
-          if (b==102||c==102)
-         //cout<<chi_non[key]<<"              "<<len[key];
-         cout<<"  \n";
 
 
        //for (int l=0;l<3;l++)
@@ -148,6 +137,13 @@
         else cout<<"INVALID ";
 
          //if (shw) {
+          if (b==104||c==104)
+          cout<<chi_non[key]<<"              "<<len[key];
+
+
+          if (b==102||c==102)
+          cout<<chi_non[key]<<"              "<<len[key];
+          cout<<"  \n";
 
 
          //}
@@ -196,7 +192,7 @@
 
 
 
-        class CHINESE :protected DATA , public COMMON   {
+        class CHINESE :protected COMMON_DATA   {
 
      /********************* Chinese Function ********************/
 
@@ -594,7 +590,7 @@ class HOME :public MENU {
  };
 
 
-   class show :protected DATA {
+   class show :protected COMMON_DATA {
 
     public:
     void  add() {
