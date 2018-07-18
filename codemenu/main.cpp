@@ -55,7 +55,7 @@
 
 /************reading from txt file*************************/
 
-        string reading(ifstream &read_item,int &l) {
+     string reading(ifstream &read_item,int &l) {
 
             char ch;
             string temp;
@@ -68,13 +68,92 @@
                return temp;
            }
 
-           void space(int sp) {
+     void space(int sp) {
 
             while(sp) {
               cout<<" ";
               sp--;
              }
-          }
+           }
+
+     void select(){
+
+      gotoxy(2,1);
+      cout<<"Selected Items";
+      gotoxy(19,0);
+      cout<<"Amount\n";
+
+      bool o=true;
+      int key;
+
+      do {
+
+          char slc[6]={0,0,0,0,0,0},che;
+          int a=0,b=0,c=0;
+
+          if (b==104||c==104)
+         //cout<<chi_non[key]<<"              "<<len[key];
+         cout<<key;
+
+          if (b==102||c==102)
+         //cout<<chi_non[key]<<"              "<<len[key];
+         cout<<"  \n";
+
+
+       //for (int l=0;l<3;l++)
+
+
+
+            int l=0;
+            bool condition=true;
+
+          while(condition)  {
+
+            //cin>>che;
+            che=getch();
+            cout<<che;
+
+          //cin.get(slc[l]);         //errorr getch();
+            if(che==13){
+
+              //cout<<"\n";
+              che='1';
+              condition=false;
+               }
+
+            if (che==27) o=false;
+
+            slc[l]=che;
+            l++;
+
+
+            //if(ch==13)
+              //break;
+        }
+
+           a=(int)slc[0];//cout<<"a "<<a;
+           b=(int)slc[1];//cout<<"\nb "<<b;
+           c=(int)slc[2];//cout<<"\nc "<<c;
+           //d=(int)slc[3];//cout<<"\nd "<<d;
+
+        if (((a>48&&a<58)&&(b==104||b==102)&&(c>48&&c<58))||((a>48&&a<50)&&(b>47&&b<54)&&(c==104||c==102))) {
+
+              if (c==104||c==102) key=(b-48)+9;
+              //b=(10-a)+2;
+
+              else key=a-49;
+
+            }
+
+        else cout<<"INVALID ";
+
+         //if (shw) {
+
+
+         //}
+      }while(o);
+      //cout<<slc<<" 100";
+    }
 
 
 /******************Veg and Non-Veg display****************/
@@ -283,87 +362,7 @@
         cout<<no<<" "<<chi_non15<<"\n";  no++;
      **/
 
-      gotoxy(2,1);
-      cout<<"Selected Items";
-      gotoxy(19,0);
-      cout<<"Amount\n";
-
-      bool o=true,shw=false;
-      int key;
-
-      do {
-
-          char slc[6],che;
-          int a,b,c;
-
-         if (shw) {
-
-         if (b==104||c==104)
-         cout<<chi_non[key]<<"              "<<len[key];
-
-         if (b==102||c==102)
-         cout<<chi_non[key]<<"              "<<len[key];
-         cout<<"  \n";
-         }
-
-       //for (int l=0;l<3;l++)
-
-
-
-          int l=0;
-            bool condition=true;
-
-          while(condition)  {
-
-                int test;
-                test*=test++;
-
-            //cin>>che;
-                che=getch();
-            cout<<che;
-
-          //cin.get(slc[l]);         //errorr getch();
-            if(che==13){
-
-              //cout<<"\n";
-              che='1';
-              condition=false;shw=false;
-               }
-            if (che==27) {
-                o=false;
-            }
-            slc[l]=che;
-            l++;
-
-
-            //if(ch==13)
-              //break;
-        }
-
-           a=(int)slc[0];//cout<<"a "<<a;
-           b=(int)slc[1];//cout<<"\nb "<<b;
-           c=(int)slc[2];//cout<<"\nc "<<c;
-           //d=(int)slc[3];//cout<<"\nd "<<d;
-
-        if (((a>48&&a<58)&&(b==104||b==102)&&(c>48&&c<58))||((a>48&&a<50)&&(b>47&&b<54)&&(c==104||c==102))) {
-
-             shw=true;
-
-            if (c==104||c==102) {
-
-              //cout<<"hellow";
-              key=(b-48)+9;
-              //b=(10-a)+2;
-            }
-
-            else {
-
-            key=a-49;
-            //}
-           }
-          }
-      }while(o);
-      //cout<<slc<<" 100";
+      select();
 
 
                       }
@@ -516,14 +515,14 @@ class HOME :public MENU {
 
       getch();
 
-      home_disp();cout<<"hello";getch();
+      //home_disp();cout<<"hello";getch();
 
-      }
+
 
       /******************* Home Function ********************/
 
 
-     void home_disp() {
+     //void home_disp() {
 
      int jump;
 
@@ -591,7 +590,7 @@ class HOME :public MENU {
        else {
         cout<<"break";getch();}
      }while(jump!=0);
-   }
+    }
  };
 
 
@@ -623,4 +622,5 @@ class HOME :public MENU {
       tem.add();
 
       return 0;
-     }
+
+       }
