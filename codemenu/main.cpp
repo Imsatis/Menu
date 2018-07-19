@@ -74,89 +74,95 @@
 
      int select(bool &o){
 
-      //bool o=true;
-      int ky;
-      bool shw; char test=13;
+          int ky;
+          bool shw;
+          char enter=13,null=0;
 
       //do {
 
-          char slc[6]={0,0,0,0,0,0},che;
-          int a=0,b=0,c=0;
+          char slc[]={0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
+          char che;
+          //int a=0,b=0,c=0;
 
 
+          int l=0;
+          bool condition=true;
+          //cout<<"  ";
 
-       //for (int l=0;l<3;l++)
-
-
-
-            int l=0;
-            bool condition=true;
-
-          while(condition)  {
-
-            //cin>>che;
+      while(condition)  {
 
 
-            che=getch();
-            if((che>47&&che<58)||(che>96&&che<123)||che==13)
-            if((che>47&&che<58)||(che>96&&che<123)||che==13)
-            cout<<che;
+          che=getch();
 
+          if((che>47&&che<58)||(che>96&&che<123)||che==13||che==8)
+                cout<<che;
 
-          //cin.get(slc[l]);         //errorr getch();
-            if(che==13){
+             //cin.get(slc[l]);
 
-              //cout<<"\n";
+          if(che==13)  {
+
               che='1';
               condition=false;shw=false;
-               }
+              char bell=07;
+              cout<<bell;
 
-            if (che==27) o=false;
+                }
 
-            if((che>47&&che<58)||(che>96&&che<123)) {
+          if (che==27) o=false;
 
-            slc[l]=che;
-            l++;
+          if (che==8) {
+            cout<<null<<che;
+            l--;
             }
 
-            //if(ch==13)
-              //break;
-        }
+          if((che>47&&che<58)||(che>96&&che<123)) {
 
-           a=(int)slc[0];//cout<<"a "<<a;
-           b=(int)slc[1];//cout<<"\nb "<<b;
-           c=(int)slc[2];//cout<<"\nc "<<c;
-           //d=(int)slc[3];//cout<<"\nd "<<d;
+              slc[l]=(int)che;
+              l++;
 
-        if (((a>48&&a<58)&&(b==104||b==102)&&(c>48&&c<58))||((a>48&&a<50)&&(b>47&&b<54)&&(c==104||c==102))) {
+                }
+              }
+
+          // a=(int)slc[0];
+          // b=(int)slc[1];
+          // c=(int)slc[2];
+         //d=(int)slc[3];
+
+        //if (((a>48&&a<58)&&(b==104||b==102)&&(c>48&&c<58))||((a>48&&a<50)&&(b>47&&b<54)&&(c==104||c==102))) {
+
+        if (((slc[0]>48&&slc[0]<58)&&(slc[1]==104||slc[1]==102)&&(slc[2]>48&&slc[2]<58))||((slc[0]>48&&slc[0]<50)&&(slc[1]>47&&slc[1]<54)&&(slc[2]==104||slc[2]==102))) {
 
               shw=true;
 
-              if (c==104||c==102) {
-                ky=(b-48)+9;
-               }
+              //if (c==104||c==102) ky=(b-48)+9;
+              if (slc[2]==104||slc[2]==102) ky=(slc[1]-48)+9;
 
-              else {
-               ky=a-49;
-              }
-            }
+              else ky=slc[0]-49;
 
-        else cout<<"                       "<<test<<"INVALID ";
+                  }
 
-          if (shw) {
-            if (b==104||c==104) return ky;
+            else
+            cout<<"                                          "<<enter<<"INVALID ";
+
+
+
+         if (shw) {
+
+          // if (b==104||c==104) return ky;
           //cout<<chi_non[key]<<"              "<<len[key];
 
+            if (slc[1]==104||slc[2]==104) return ky;
 
-           if (b==102||c==102) return ky;
+          // if (b==102||c==102) return ky;
           //cout<<chi_non[key]<<"              "<<len[key];
-          //cout<<"  \n";
-          }
+
+            if (slc[1]==102||slc[2]==102) return ky;
+
+             }
 
         return 1000;
       //}while(o);
-      //cout<<slc<<" 100";
-    }
+       }
 
 
 /******************Veg and Non-Veg display****************/
@@ -365,9 +371,9 @@
         cout<<no<<" "<<chi_non15<<"\n";  no++;
      **/
 
-      gotoxy(2,1);
+      gotoxy(4,1);
       cout<<"Selected Items";
-      gotoxy(19,0);
+      gotoxy(17,0);
       cout<<"Amount\n";
 
 
@@ -375,9 +381,11 @@
   do {
       int key=select(oo);
 
-      if(key!=1000)
-      cout<<chi_non[key]<<"              "<<len[key]<<"  \n";
-
+      if(key!=1000) {
+      cout<<"* "<<chi_non[key];
+      space(len[key]);
+      cout<<len[key]<<"  \n";
+          }
      }while(oo);
                       }
 
