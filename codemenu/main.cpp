@@ -95,9 +95,13 @@
           while(condition)  {
 
             //cin>>che;
+
+
             che=getch();
-            //if((che>47&&che<58)||(che>64&&che<91||che>96&&che<123))
+            if((che>47&&che<58)||(che>96&&che<123)||che==13)
+            if((che>47&&che<58)||(che>96&&che<123)||che==13)
             cout<<che;
+
 
           //cin.get(slc[l]);         //errorr getch();
             if(che==13){
@@ -109,9 +113,11 @@
 
             if (che==27) o=false;
 
+            if((che>47&&che<58)||(che>96&&che<123)) {
+
             slc[l]=che;
             l++;
-
+            }
 
             //if(ch==13)
               //break;
