@@ -9,18 +9,22 @@
   class control {
 
 
-      char check;
+      char check,enter;
 
  public:
-     control(char x) {
+     control(int x) {
 
        check=x;
+       enter=13;
+       ;
 
      }
 
     void show() {
 
-       cout<<"\n"<<check<<"\t"<<(int) check;
+      // cout<<"\n"<<check<<"\t"<<(int) check;
+      string test="i m satis";
+      cout<<enter<<check<<test<<check;getch();cout<<test;
     }
 
   };
@@ -29,15 +33,18 @@
 
   int main() {
 
-    int ch;
-    int i=0;
+     int ch;
+    int i;
 
-    while((ch=getch()!=32)) {
+    while(ch) {
+    cin>>i;
     control ob(i);
     ob.show();
-    i++;
+    if (i==32) ch=0;
+
+    }
 //    getch();
+     return 000;
     }
 
 
-}
