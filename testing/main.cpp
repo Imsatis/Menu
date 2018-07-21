@@ -23,16 +23,18 @@ using namespace std;
       int r;
      //return
       r=a+b;
+      cout<<r;
    }
 
  };
 
-int main()
+/**int main()
 {
     var obj;
     obj.add();
-    cout<<obj.r;
+
 
     return 0;
 }
 
+**/
