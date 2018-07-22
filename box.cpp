@@ -22,14 +22,15 @@ using namespace std;
         for (int k=0;k<1;k++) {
              cout<<v;
            for (int k=0;k<40;k++) {
-             cout<<sp;
+
               if(l==5) {
-                if(sh==0) {
-              cout<<"hellow world";
-              sh++;
-                }
-                else {}
-              }
+                 if(sh==0) {
+                  cout<<"hellow world";
+                  sh++;
+                  }
+                 else {}
+                 }
+              else  cout<<sp;
              }
             cout<<v;
            }
