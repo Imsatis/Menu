@@ -6,7 +6,8 @@ using namespace std;
   int main() {
 
      char tlc=201,h=205,trc=187,v=186,blc=200,brc=188,sp=32,lf=10;
-     int sh=0;
+     int sh=0,l;
+     char text[15];
 
      gotoxy(25,6);
      for(int i=0;i<1;i++) {
@@ -24,12 +25,34 @@ using namespace std;
            for (int k=0;k<40;k++) {
 
               if(l==5) {
+
                  if(sh==0) {
-                  cout<<"hellow world";
-                  sh++;
-                  }
+                    int s=40,temp,n=0;
+                     char ch,null=0,bs=8;
+                    //s-=l;
+                    temp=s/2;
+                     while(temp) {
+                      cout<<sp;
+                      temp--;
+                       }
+
+                        while((ch=getch())!=13) {
+
+                            text[n]=ch;n++;
+                            cout<<bsnull;
+                        }
+
+                     cout<<text;
+                      temp=s/2;
+                     while(temp) {
+                      cout<<sp;
+                      temp--;
+                       }
+                     sh++;
+                   }
                  else {}
                  }
+
               else  cout<<sp;
              }
             cout<<v;
