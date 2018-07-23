@@ -25,13 +25,13 @@ using namespace std;
              cout<<v;
            for (int k=0;k<40;k++) {
 
-              if(l==50) {
+              if(l==5) {
 
                  if(sh==0) {
-                    //int s=40,temp,n=0;
-                     //char ch,null=0,bs=8;
-                    //s-=l;
-              /*      temp=s/2;
+                    int s=40,temp,n=0;
+                    char ch,null=0,bs=8;
+                    s-=l;
+                    temp=s/2;
                      while(temp) {
                       cout<<sp;
                       temp--;
@@ -48,7 +48,7 @@ using namespace std;
                      while(temp) {
                       cout<<sp;
                       temp--;
-                       } **/
+                       }
                      sh++;
                    }
                  else {}
@@ -69,7 +69,7 @@ using namespace std;
         cout<<brc;
        }
 
-       char ch,null=0,bs=8;
+/**       char ch,null=0,bs=8;
        int n=0;
 
          for (int a=0;a<68;a++) cout<<bs;
@@ -78,6 +78,6 @@ using namespace std;
 
              text[n]=ch;n++;
              cout<<bs<<ch;
-          }
+          }  */
 
   }
