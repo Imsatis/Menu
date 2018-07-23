@@ -1,5 +1,6 @@
 #include<iostream>
 #include"gotoxy.h"
+#include<conio.h>
 
 using namespace std;
 
@@ -24,13 +25,13 @@ using namespace std;
              cout<<v;
            for (int k=0;k<40;k++) {
 
-              if(l==5) {
+              if(l==50) {
 
                  if(sh==0) {
-                    int s=40,temp,n=0;
-                     char ch,null=0,bs=8;
+                    //int s=40,temp,n=0;
+                     //char ch,null=0,bs=8;
                     //s-=l;
-                    temp=s/2;
+              /*      temp=s/2;
                      while(temp) {
                       cout<<sp;
                       temp--;
@@ -39,7 +40,7 @@ using namespace std;
                         while((ch=getch())!=13) {
 
                             text[n]=ch;n++;
-                            cout<<bsnull;
+                            cout<<bs<<ch;
                         }
 
                      cout<<text;
@@ -47,7 +48,7 @@ using namespace std;
                      while(temp) {
                       cout<<sp;
                       temp--;
-                       }
+                       } **/
                      sh++;
                    }
                  else {}
@@ -67,5 +68,16 @@ using namespace std;
         }
         cout<<brc;
        }
+
+       char ch,null=0,bs=8;
+       int n=0;
+
+         for (int a=0;a<68;a++) cout<<bs;
+
+         while((ch=getch())!=13) {
+
+             text[n]=ch;n++;
+             cout<<bs<<ch;
+          }
 
   }
