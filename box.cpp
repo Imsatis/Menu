@@ -40,7 +40,7 @@ using namespace std;
                         while((ch=getch())!=13) {
 
                             text[n]=ch;n++;
-                            cout<<bs<<ch;
+                            cout<<bs<<bs<<null<<ch;
                         }
 
                      cout<<text;
