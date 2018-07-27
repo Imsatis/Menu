@@ -34,6 +34,8 @@
         //string ary[];
 
         //nt aa;
+        int selected[20];
+
         string chi_non[15]; int len[15];
 
         string   chi_non1,chi_non2,chi_non3,chi_non4,chi_non5,chi_non6,chi_non7,chi_non8,chi_non9,chi_non10,chi_non11,chi_non12,chi_non13,chi_non14,chi_non15;
@@ -378,15 +380,20 @@
 
 
       bool oo=true;
+      int inc=0;
   do {
       int key=select(oo);
 
       if(key!=1000) {
+      selected[inc]=key;
+        inc++;
       cout<<"* "<<chi_non[key];
       space(len[key]);
       cout<<len[key]<<"  \n";
           }
      }while(oo);
+
+//         return inc;
                       }
 
       void chi_veg_show() {
@@ -452,7 +459,15 @@ class MENU :public CHINESE {
 
       do {
 
+
     system("cls");
+
+    int li=0;
+
+       while(selected[li]) {
+        cout<<selected[li];
+        li++;
+       }
 
     gotoxy(32,10);
     cout<<"1.CHINESE";
